@@ -1,40 +1,101 @@
-@font-face {
-  font-family: Biko;
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
-}
+/* Home.module.css */
+
+  
+  /* Define the parent class for the pseudo-element */
+  .bg::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 60px rgba(228, 26, 70, 1); 
+    background: rgba(228, 26, 70, 0.6);
+    /* -webkit-backdrop-filter: blur; */
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+  }
+  
+  @keyframes sliderShape {
+    0%, 100% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+      
+    }
+    34% {
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+      
+    }
+    50% {
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+      
+    }
+    67% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+      
+    }
+  }
 
 
-.header-container {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  max-width: 1200px;
-}
 
-.header-video {
-  width: 100%;
-}
+  
+  .blob {
+    position: absolute;
+    content: "";
+    top: 10%;
+    left:10%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 40px rgba(238, 237, 240, 0.7);
+    background: rgba(121, 203, 21, 0.4);
+    border-radius: 50%;
+    will-change: transform, opacity;
+    animation: blobAnimation 5s linear infinite;
+  }
+  
+  @keyframes blobAnimation {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+      opacity: 0.4; /* Adjust the opacity as needed */
+    }
+    34% {
+      transform: translate3d(0, 10px, 0) rotateZ(0.01deg);
+      opacity: 0.7; /* Adjust the opacity as needed */
+    }
+    50% {
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+      opacity: 0.4; /* Adjust the opacity as needed */
+    }
+    67% {
+      transform: translate3d(0, -5px, 0) rotateZ(0.01deg);
+      opacity: 0.7; /* Adjust the opacity as needed */
+    }
+  }
 
-.svg-container {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; /* needed for FF, Safari, Edge */
-  height: 100%;
-}
-
-.svg-text {
-  font-family: Biko, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 38px;
-}
-
-.svg-rect {
-  fill: white;
-}
-
-.svg-rect-mask {
-  -webkit-mask: url(#mask);
-  mask: url(#mask);
-}
+  .blob:nth-child(1) {
+    /* Style for the first blob */
+    top: 20%;
+    left: 30%;
+    opacity: 0.5; /* Adjust as needed */
+  }
+  
+  .blob:nth-child(2) {
+    /* Style for the second blob */
+    top: 40%;
+    left: 60%;
+    opacity: 0.7; /* Adjust as needed */
+  }
+  
+  .blob:nth-child(3) {
+    /* Style for the third blob */
+    top: 60%;
+    left: 20%;
+    opacity: 0.6; /* Adjust as needed */
+  }
+  
