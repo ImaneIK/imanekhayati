@@ -1,0 +1,71 @@
+import React from 'react';
+import Link from 'next/link';
+
+const cardsData = [
+    {
+      slug: 'project1',
+      title: 'Meteor theme',
+      description: 'A Shopify like E-commerce website in Nuxt.js and Tailwind CSS.',
+    },
+    {
+      slug: 'project2',
+      title: 'Leaf.ai App',
+      description: 'An intelligent plant disease scanner backed with a machine learning model',
+    },
+    {
+      slug: 'project3',
+      title: 'Smart home app',
+      description: 'A flutter mobile app to help you take control of your smart home',
+    },
+    {
+      slug: 'project4',
+      title: 'Bluemin',
+      description: 'A blogging app in MEVN stack',
+    },
+    {
+      slug: 'project5',
+      title: 'E-BAZAAR',
+      description: 'An E-commerce website for all the Moroccan artisans out there',
+    },
+    {
+      slug: 'project6',
+      title: 'This portfolio :)',
+      description: 'A nutshell of all the projects mentioned here, made with love and Next.js',
+    },
+  ];
+  
+
+const CardGrid = () => {
+  return (
+    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {cardsData.map((card, index) => (
+        <Link
+          key={index}
+          className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10"
+          href={`/project/${card.slug}`}
+        >
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-indigo-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+              />
+            </svg>
+          <h2 className="mt-4 text-xl font-bold text-white">{card.title}</h2>
+          <p className="mt-1 text-sm text-gray-300">{card.description}</p>
+        </Link>
+      ))}
+    </div>
+  );
+};
+
+export default CardGrid;

@@ -8,20 +8,61 @@ export default function Home() {
    
      
      
-      <div className={[styles.sliderthumb,"w-full md:h-full p-8 md:p-12"] }>
+      <div className={[styles.sliderthumb,"w-full md:h-full p-4 md:p-12"] }>
         
-        <div className="block bg-blue-800 bg-opacity-10 backdrop-blur-xl flex flex-col rounded-lg w-full h-full p-12 md:gap-8 overflow-hidden">
-        <div className="flex flex-row justify-between ">
-            <div><p className="text-xs text-gray-400">IKONIK</p></div>
-            <div className="px-6 text-xs hidden md:block">
-              <ul className="flex gap-4 text-gray-400 capitalize">
-                <li className="inline-block">who am i</li>
-                <li className="inline-block">skills</li>
-                <li className="inline-block">portfolio</li>
-                <li className="inline-block">get in touch</li>
-              </ul>
+        <div className="block bg-blue-800 bg-opacity-10 backdrop-blur-xl flex flex-col rounded-lg w-full h-full p-6 md:p-12 overflow-hidden">
+       
+          <div class="mx-auto md:mx-0 max-w-screen-xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+  
+            <div class="flex-1 md:flex md:items-center md:gap-12">
+              <a class="block text-gray-500" href="/"> IKONIK </a>
             </div>
+
+            <div class="md:flex md:items-center md:gap-12">
+              <nav aria-label="Global" class="hidden md:block">
+                <ul class="flex items-center gap-6 text-sm">
+                  <li>
+                    <a
+                      class="text-gray-500 transition hover:text-gray-500/75"
+                      href="/"
+                    >
+                      about
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="text-gray-500 transition hover:text-gray-500/75"
+                      href="/"
+                    >
+                      skills
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="text-gray-500 transition hover:text-gray-500/75"
+                      href="/"
+                    >
+                      portfolio
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="text-gray-500 transition hover:text-gray-500/75"
+                      href="/"
+                    >
+                      get in touch
+                    </a>
+                  </li>
+
+                </ul>
+              </nav>
+            </div>
+
           </div>
+
 
           {/* heading & social media */}
           <div className="flex flex-col  md:flex-row items-center justify-between py-6 gap-8">
@@ -30,9 +71,12 @@ export default function Home() {
               <h1 className="text-sm text-gray-400">
                 I am a
               </h1>
-              <p className="text-4xl md:text-8xl font-bold text-white ">
-                Digital<br/> Craftsperson
+              <p className="text-4xl md:text-8xl font-bold text-white  ">
+                Digital 
               </p>
+              <svg viewbox="0 0 10 1.3">
+                <text x="5" y="1" text-anchor="middle" font-size="1" fill="none" stroke-width=".015" stroke="#fff" font-family="">Craftsperson</text>
+              </svg>
             </div>
 
             <div className="w-fit flex flex-row md:flex-col gap-2 items-center md:items-end justify-center px-2 m-2">
