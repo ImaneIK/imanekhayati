@@ -2,23 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: #113485 0%;
   --background-end-rgb: #060f20 100%;
-  /* background: linear-gradient(45deg, #113485 0%, #060f20 100%); */
+  /* background: linear-gradient(45deg, #01123b 0%, #00040b 100%); */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: black;
+    --foreground-rgb: black; 
     --background-start-rgb: white;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; */
+  /* color: rgb(var(--foreground-rgb)); */
   /* background:black; */
   background: linear-gradient(45deg, #01123b 0%, #00040b 100%);
 }

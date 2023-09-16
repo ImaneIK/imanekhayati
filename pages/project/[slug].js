@@ -1,133 +1,452 @@
-import { useRouter } from 'next/router';
-import Image from 'next/image';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { cardsData } from "@/components/data";
+import Image from "next/image";
+import CaseStudy from "@/components/CaseStudy";
 
 const ProjectPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  // Fetch data for the project based on the slug parameter
-  // You can use an API call or any data fetching method here
-  // Example: const projectData = fetchDataBySlug(slug);
+  // Find the card data based on the slug
+  // const card = cardsdata.find((card) => card.slug === slug);
 
   return (
-    <div className="flex flex-row py-8 ">
+    <div className="h-screen w-full flex overflow-hidden select-none">
+      
+      <nav className="hidden md:block w-24 flex flex-col items-center py-4">
+        {/* logo */}
+        <div className="text-gray-500 font-semibold">
+          <p>IKONIK</p>
+        </div>
+
+        {/* sidebar */}
+        <ul className="mt-2 text-gray-700 dark:text-gray-400 capitalize">
+          
+          {/* projects */}
+          <li className="mt-3 p-2 text-blue-600 dark:text-blue-300 rounded-lg">
+            <Link href="#" className=" flex flex-col items-center">
+              <svg className="fill-current h-5 w-5" viewBox="0 0 24 24">
+                <path
+                  d="M19 5v2h-4V5h4M9 5v6H5V5h4m10 8v6h-4v-6h4M9
+							17v2H5v-2h4M21 3h-8v6h8V3M11 3H3v10h8V3m10
+							8h-8v10h8V11m-10 4H3v6h8v-6z"
+                ></path>
+              </svg>
+              <span className="text-xs mt-2">Projects</span>
+            </Link>
+          </li>
+
+          {/* search */}
+          <li className="mt-3 p-2 hover:text-blue-600 dark-hover:text-blue-300
+				rounded-lg"
+          >
+            <Link href="#" className=" flex flex-col items-center">
+              <svg className="fill-current h-5 w-5" viewBox="0 0 512 512">
+                <path
+                  d="M505 442.7L405.3
+							343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7
+							44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208
+							208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7
+							17l99.7 99.7c9.4 9.4 24.6 9.4 33.9
+							0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7
+							0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128
+							57.2 128 128 0 70.7-57.2 128-128 128z"
+                ></path>
+              </svg>
+              <span className="text-xs mt-2">search</span>
+            </Link>
+          </li>
+
+          {/* profile */}
+          <li className="mt-3 p-2 hover:text-blue-600 dark-hover:text-blue-300 rounded-lg" >
+            <Link href="#" className=" flex flex-col items-center">
+            <svg className="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+              <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+              <span className="text-xs mt-2">profile</span>
+            </Link>
+          </li>
+
+            {/* settings */}
+          <li className="mt-3 p-2 hover:text-blue-600 rounded-lg">
+            <a href="#" className=" flex flex-col items-center">
+            <svg className="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+              <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+              <span className="text-xs mt-2">settings</span>
+            </a>
+          </li>
+        </ul>
+
+        {/* feedback */}
+        <div
+          className="mt-auto flex items-center p-2 text-blue-700 bg-purple-200
+			dark:text-blue-500 rounded-full"
+        >
+          <a href="#">
+            <svg className="fill-current h-5 w-5" viewBox="0 0 24 24">
+              <path
+                d="M12 1c-5 0-9 4-9 9v7a3 3 0 003 3h3v-8H5v-2a7 7 0 017-7
+						7 7 0 017 7v2h-4v8h4v1h-7v2h6a3 3 0
+						003-3V10c0-5-4.03-9-9-9z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+     
+      <main className=" p-8 px-10 flex-1  transition duration-500 ease-in-out overflow-y-auto" >
+        <div className="flex flex-col capitalize text-3xl text-white">
+          <span className="font-semibold">This portfolio</span>
+          <span>A nutshell of all the projects mentioned here, made with love and Next.js</span>
+        </div>
         
-        <div className=" hidden md:block flex flex-col text-white fill-white ">
-            <div className="mx-auto p-4 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+        <div className="flex flex-col md:flex-row">
+          <div className="mr-6 w-full md:w-1/2 mt-8 py-2 flex-shrink-0 flex flex-col bg-white dark:bg-gray-600 rounded-lg" >
+            <h3 className="flex items-center pt-1 pb-1 px-8 text-lg font-semibold capitalize dark:text-gray-300" >
+              <span>nearby jobs</span>
+              <button className="ml-2">
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 256 512">
+                  <path
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9
+								0l-22.6-22.6c-9.4-9.4-9.4-24.6
+								0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6
+								0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136
+								136c9.5 9.4 9.5 24.6.1 34z"
+                  ></path>
                 </svg>
-            </div>
-            <nav className="relative flex flex-col py-4 items-center">
-                <a href="#" className="relative w-16 p-4 text-purple-900 rounded-2xl mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" />
-                </svg>
-                <span
-                    className="absolute -top-2 -right-2 h-6 w-6 p-2 flex justify-center items-center text-white rounded-full">3</span>
-                </a>
-                <a href="#" className="w-16 p-4 border text-gray-700 rounded-2xl mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                </svg>
-                </a>
-                <a href="#" className="w-16 p-4 border text-gray-700 rounded-2xl mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                </a>
-                <a href="#" className="w-16 p-4 border text-gray-700 rounded-2xl mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                </svg>
-                </a>
-                <a href="#" className="w-16 p-4 border text-gray-700 rounded-2xl mb-24">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                </svg>
-                </a>
-                <a href="#" className="w-16 p-4 border text-gray-700 rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                </a>
-            </nav>
-        </div>
+              </button>
+            </h3>
 
-        <div className=" hidden md:block w-1/3 p-4 flex flex-col h-full w-full overflow-y-scroll text-white">
-            <label className="px-3">
-                <input className="rounded-lg p-4  transition duration-200 focus:outline-none focus:ring-2 w-full"
-                placeholder="Search..." />
-            </label>
+            <div>
+              <ul className="pt-1 pb-2 px-3 overflow-y-auto">
+                <li className="mt-2">
+                  <a
+                    className="p-5 flex flex-col justify-between
+								bg-gray-100 dark:bg-gray-200 rounded-lg"
+                    href="#"
+                  >
+                    <div
+                      className="flex items-center justify-between
+									font-semibold capitalize dark:text-gray-700"
+                    >
+                      <span>english lesson</span>
 
-            <ul className="mt-6">
-                <li className="py-5 border-b px-3 transition hover:bg-indigo-100">
-                <a href="#" className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold">Akhil Gautam</h3>
-                </a>
-                </li>
-                <li className="py-5 border-b px-3 transition hover:bg-indigo-100">
-                <a href="#" className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold">Akhil Gautam</h3>
-                </a>
-                </li>
-                <li className="py-5 border-b px-3 transition hover:bg-indigo-100">
-                <a href="#" className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold">Akhil Gautam</h3>
-                </a>
-                </li>
-                <li className="py-5 border-b px-3 transition hover:bg-indigo-100">
-                <a href="#" className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold">Akhil Gautam</h3>
-                </a>
-                </li>
-            </ul>
-        </div>
-        
-        <div className="flex flex-col ">
-            <div className="text-white">
-                <div className=" ">
-                    <div className="px-4 lg:px-0">
-                        <h2 className="text-4xl font-semibold text-gray-800 leading-tight">Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales, massa et auctor.</h2>
+                      <div className="flex items-center">
+                        <svg
+                          className="h-5 w-5 fill-current mr-1
+											text-gray-600"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 12l-4-4v3H2v2h8v3m12-4a10
+												10 0 01-19.54 3h2.13a8 8 0
+												100-6H2.46A10 10 0 0122 12z"
+                          ></path>
+                        </svg>
+                        <span>4.2 mi</span>
+                      </div>
                     </div>
-                    {/* <Image width={400} height={300} src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" className="w-full object-cover lg:rounded" style="height: 28em;"></Image> */}
-                </div>
 
-                <div className="">
-                    <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
-                            <p className="pb-6">Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is
-                                justice. Six draw
-                                you him full not mean evil. Prepare garrets it expense windows shewing do an. She projection advantages
-                                resolution son indulgence. Part sure on no long life am at ever. In songs above he as drawn to. Gay was
-                                outlived peculiar rendered led six.</p>
+                    <p
+                      className="text-sm font-medium leading-snug
+									text-gray-600 my-3"
+                    >
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo assumenda porro sapiente, cum nobis tempore
+                      delectus consectetur ullam reprehenderit quis ducimus,
+                      iusto dolor nam corporis id perspiciatis consequuntur
+                      saepe excepturi.
+                    </p>
 
-                            <p className="pb-6">Difficulty on insensible reasonable in. From as went he they. Preference themselves me as
-                                thoroughly
-                                partiality considered on in estimating. Middletons acceptance discovered projecting so is so or. In or
-                                attachment inquietude remarkably comparison at an. Is surrounded prosperous stimulated am me discretion
-                                expression. But truth being state can she china widow. Occasional preference fat remarkably now projecting
-                                uncommonly dissimilar. Sentiments projection particular companions interested do at my delightful. Listening
-                                newspaper in advantage frankness to concluded unwilling.</p>
+                    <div className="flex justify-between">
+                      <div className="flex">
+                        <img
+                          className="h-6 w-6 rounded-full mr-3"
+                          src="https://i.pinimg.com/originals/b7/06/0b/b7060b60f6ee1beeedf7d648dabd89a1.jpg"
+                          alt=""
+                        />
+                        <span>
+                          <span
+                            className="text-blue-500
+												font-semibold"
+                          >
+                            Regina C.
+                          </span>
+                          via HeyTutor
+                        </span>
+                      </div>
 
-                            <p className="pb-6">Adieus except say barton put feebly favour him. Entreaties unpleasant sufficient few pianoforte
-                                discovered
-                                uncommonly ask. Morning cousins amongst in mr weather do neither. Warmth object matter course active law
-                                spring six. Pursuit showing tedious unknown winding see had man add. And park eyes too more him. Simple excuse
-                                active had son wholly coming number add. Though all excuse ladies rather regard assure yet. If feelings so
-                                prospect no as raptures quitting.</p>
+                      <p
+                        className="text-sm font-medium leading-snug
+										text-gray-600"
+                      >
+                        14 hours ago
+                      </p>
                     </div>
-                </div>
+                  </a>
+                </li>
+                <li className="mt-2">
+                  <a
+                    className="p-5 flex flex-col justify-between
+								bg-gray-100 dark:bg-gray-200 rounded-lg"
+                    href="#"
+                  >
+                    <div
+                      className="flex items-center justify-between
+									font-semibold capitalize dark:text-gray-700"
+                    >
+                      <span>english lesson</span>
+
+                      <div className="flex items-center">
+                        <svg
+                          className="h-5 w-5 fill-current mr-1
+											text-gray-600"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M14 12l-4-4v3H2v2h8v3m12-4a10
+												10 0 01-19.54 3h2.13a8 8 0
+												100-6H2.46A10 10 0 0122 12z"
+                          ></path>
+                        </svg>
+                        <span>4.2 mi</span>
+                      </div>
+                    </div>
+
+                    <p
+                      className="text-sm font-medium leading-snug
+									text-gray-600 my-3"
+                    >
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Explicabo assumenda porro sapiente, cum nobis tempore
+                      delectus consectetur ullam reprehenderit quis ducimus,
+                      iusto dolor nam corporis id perspiciatis consequuntur
+                      saepe excepturi.
+                    </p>
+
+                    <div className="flex justify-between">
+                      <div className="flex">
+                        <img
+                          className="h-6 w-6 rounded-full mr-3"
+                          src="https://i.pinimg.com/originals/b7/06/0b/b7060b60f6ee1beeedf7d648dabd89a1.jpg"
+                          alt="Issue"
+                        />
+                        <span>
+                          <span
+                            className="text-blue-500
+												font-semibold"
+                          >
+                            Regina C.
+                          </span>
+                          via HeyTutor
+                        </span>
+                      </div>
+
+                      <p
+                        className="text-sm font-medium leading-snug
+										text-gray-600"
+                      >
+                        14 hours ago
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                className="flex justify-center capitalize text-blue-500
+						dark:text-blue-200"
+              >
+                <span>see all</span>
+              </a>
             </div>
+          </div>
+
+          <div className="mr-6 w-full md:w-1/2 mt-8 py-2 flex-shrink-0 flex flex-col bg-purple-300 rounded-lg text-white" >
+            <h3 className="flex items-center pt-1 pb-1 px-8 text-lg font-bold capitalize" >
+              <span>scheduled lessons</span>
+              <button className="ml-2">
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 256 512">
+                  <path
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9
+								0l-22.6-22.6c-9.4-9.4-9.4-24.6
+								0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6
+								0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136
+								136c9.5 9.4 9.5 24.6.1 34z"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+
+            <div className="flex flex-col items-center mt-12">
+              <img
+                src="https://cdni.iconscout.com/illustration/premium/thumb/empty-state-2130362-1800926.png"
+                alt=" empty schedule"
+              />
+
+              <span className="font-bold mt-8">Your schedule is empty</span>
+
+              <span className="text-purple-500">
+                Make your first appointment
+              </span>
+
+              <button className="mt-8 bg-purple-800 rounded-lg py-2 px-4">
+                Find a Job
+              </button>
+            </div>
+          </div>
         </div>
+      </main>
+
+      <aside
+        className="hidden md:block w-1/4 my-1 mr-1 px-6 py-4 flex flex-col bg-gray-200 dark:bg-black
+		dark:text-gray-400 rounded-r-lg overflow-y-auto"
+      >
+        <div className="flex items-center justify-between">
+          <a href="#" className="relative">
+            <span>
+              <svg
+                className="h-5 w-5 hover:text-red-600 dark-hover:text-red-400"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </span>
+
+            <div className="absolute w-2 h-2 left-0 mb-6 ml-2 bottom-0">
+              <span
+                className="px-2 py-1 bg-red-600 rounded-full text-white
+						text-xs"
+              >
+                7
+              </span>
+            </div>
+          </a>
+
+          <div className="flex items-center">
+            <img
+              className="h-10 w-10 rounded-full object-cover"
+              src="https://i.pinimg.com/originals/68/e1/e1/68e1e137959d363f172dc3cc50904669.jpg"
+              alt="tempest profile"
+            />
+
+            <button className="ml-1 focus:outline-none">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 192 512">
+                <path
+                  d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72
+							72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72
+							72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0
+							352c0 39.8 32.2 72 72 72s72-32.2
+							72-72-32.2-72-72-72-72 32.2-72 72z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <span className="mt-4 text-gray-600">Monthly earnings</span>
+        <span className="mt-1 text-3xl font-semibold">$ 1,579.20</span>
+
+        <button
+          className="mt-8 flex items-center py-4 px-3 text-white rounded-lg
+			bg-green-400 shadow focus:outline-none"
+        >
+          <svg className="h-5 w-5 fill-current mr-2 ml-3" viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+          </svg>
+
+          <span>Bill your Students</span>
+        </button>
+
+        <div className="mt-12 flex items-center">
+          <span>Payments</span>
+          <button className="ml-2 focus:outline-none">
+            <svg className="h-5 w-5 fill-current" viewBox="0 0 256 512">
+              <path
+                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9
+						0l-22.6-22.6c-9.4-9.4-9.4-24.6
+						0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3
+						103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1
+						34z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <a
+          href="#"
+          className="mt-8 p-4 flex justify-between bg-gray-300 rounded-lg
+			font-semibold capitalize"
+        >
+          <div className="flex">
+            <img
+              className="h-10 w-10 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/cX0xwvJKCNIFrl2wIwoYiIURxmZt1y7tF3wJvynqcnQG5tmYdKBLpDDvhXzmVZzrstAEkw=s151"
+              alt="veldora profile"
+            />
+
+            <div className="flex flex-col ml-4">
+              <span>veldora</span>
+              <span className="text-sm text-gray-600">english</span>
+            </div>
+          </div>
+
+          <span>$ 25</span>
+        </a>
+
+        <a
+          href="#"
+          className="mt-2 p-4 flex justify-between bg-gray-300 rounded-lg
+			font-semibold capitalize"
+        >
+          <div className="flex">
+            <img
+              className="h-10 w-10 rounded-full object-cover"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1RZ5sKLtFG-Q2xfXlLa5DbFsmF52Gc-C49B4s63CtSxLkzQY&s"
+              alt="accelerator profile"
+            />
+
+            <div className="flex flex-col ml-4">
+              <span>accelerator</span>
+              <span className="text-sm text-gray-600">english</span>
+            </div>
+          </div>
+
+          <span>$ 25</span>
+        </a>
+
+        <a
+          href="#"
+          className="mt-2 p-4 flex justify-between bg-gray-300 rounded-lg
+			font-semibold capitalize"
+        >
+          <div className="flex">
+            <img
+              className="h-10 w-10 rounded-full object-cover"
+              src="data:image/jpeg;base64,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"
+              alt="syndicate profile"
+            />
+
+            <div className="flex flex-col ml-4">
+              <span>syndicate</span>
+              <span className="text-sm text-gray-600">english</span>
+            </div>
+          </div>
+
+          <span>$ 25</span>
+        </a>
+
+        <div className="mt-4 flex justify-center capitalize text-blue-600">
+          <a href="#">see all</a>
+        </div>
+      </aside>
     </div>
   );
 };
