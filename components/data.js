@@ -24,9 +24,9 @@ export const cardsData = [
       title: 'E-BAZAAR',
       description: 'An E-commerce website for all the Moroccan artisans out there',
     },
-    {
-      slug: 'project6',
-      title: 'This portfolio :)',
-      description: 'A nutshell of all the projects mentioned here, made with love and Next.js',
-    },
+    // {
+    //   slug: 'project6',
+    //   title: 'This portfolio :)',
+    //   description: 'A nutshell of all the projects mentioned here, made with love and Next.js',
+    // },
   ];

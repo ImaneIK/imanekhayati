@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx}'
   ],
+ 
   theme: {
     extend: {
       
@@ -20,4 +22,11 @@ module.exports = {
     },
   },
   plugins: [],
+  // safelist: [
+  //   {
+  //     pattern: /w-(1/2|2/2|1/6|2/6)/ ,
+      
+
+  //   },
+  // ],
 }
