@@ -1,21 +1,20 @@
 import 'tailwindcss/tailwind.css';
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { cardsData } from "@/components/data";
+import cardsData from '../../components/data.json';  
 import Image from "next/image";
 import CaseStudy from "@/components/CaseStudy";
-import myImage from "/public/hacker.jpg";
-import leafmockup from "/public/leafmockup.png";
-import leafui1 from "/public/leafui1.png";
-import leafui2 from "/public/leafui2.png";
-import leafui3 from "/public/leafui3.png";
+
 const ProjectPage = () => {
   const router = useRouter();
   const { slug } = router.query;
 
   // Find the card data based on the slug
-  // const card = cardsdata.find((card) => card.slug === slug);
-
+  const card = cardsData.find((card) => card.slug === slug);
+  if (!card) {
+    // You can render an error message or redirect to a 404 page here
+    return <div>Card not found</div>;
+}
   return (
     <div className="flex h-screen overflow-x-hidden">
       {/* sidebar */}
@@ -115,6 +114,7 @@ const ProjectPage = () => {
         </div>
       </div>
 
+
         {/* header & content */}
         <div  className='w-17/18 md:pl-24 flex flex-col flex-1 gap-4'>
           {/* header */}
@@ -122,7 +122,7 @@ const ProjectPage = () => {
            
               <Image 
               fill="true" 
-              src={`${leafmockup.src}`}
+              src= "https://i.pinimg.com/564x/21/f9/91/21f991bc270bca7402b6b2833ac65336.jpg"
               // sizes='(max-width:768px) 100vw, 7OOpx'
               priority
               objectFit="cover"
@@ -270,12 +270,13 @@ const ProjectPage = () => {
                 </div>
 
                 <div class="mt-8">
+               
                   <h1 class="text-2xl font-bold text-gray-100 sm:text-3xl">
-                  Leaf.ai
+                  {card.title}
                   </h1>
 
                   <p class="mt-1.5 text-sm text-gray-100">
-                    An intelligent plant disease scanner built with AI 🚀
+                    {card.description}
                   </p>
                 </div>
               </div>
@@ -305,7 +306,7 @@ const ProjectPage = () => {
                   />
                   </svg>
                   <h2 className="mt-4 text-md font-bold text-white">Description</h2>
-                  <p className="mt-1 text-sm text-gray-400 ">Using cutting-edge AI algorithms, Leaf.ai empowers farmers to detect and diagnose plant diseases with unparalleled accuracy and speed. By simply capturing images of their crops, farmers can receive instant feedback on the health of their plants, enabling them to take timely and informed actions to protect their yields.</p>
+                  <p className="mt-1 text-sm text-gray-400 ">{card.excerpt}</p>
                 </div>
               
                 <div className='flex flex-col gap-4 w-full justify-center'>
@@ -327,9 +328,9 @@ const ProjectPage = () => {
                           stroke-width="2"
                           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                         />
-                      </svg>
+                    </svg>
                     <h2 className="mt-4 text-md font-bold text-white">Scope</h2>
-                    <p className="mt-1 text-sm text-gray-400">The project's context revolves around our participation in the annual "FEECRA" salon held at the Universiapolis campus in Agadir in Mai 2023. This event serves as a platform for showcasing innovative projects and ideas. Our project, Leaf.ai, was selected as the centerpiece for our stand at the salon. We proudly presented an intelligent plant disease scanner, developed using cutting-edge technologies. This outstanding project earned us the prestigious prize for the best salon stand, reflecting our dedication to innovation and excellence in the field.</p>
+                    <p className="mt-1 text-sm text-gray-400">{card.scope}</p>
                 </div>
                 
                 {/* role */}
@@ -351,7 +352,7 @@ const ProjectPage = () => {
                       />
                     </svg>
                   <h2 className="mt-4 text-md font-bold text-white">Role</h2>
-                  <p className="mt-1 text-sm text-gray-400">In the development of Leaf.ai, my role as a fullstack developer was integral to the project's success. I collaborated within a multidisciplinary team, which included experts in data science, marketing, and web development. Together, we harnessed our diverse skill sets and knowledge to create a powerful and user-friendly tool. Leaf.ai is a testament to our effective teamwork, as we worked seamlessly to make people's lives easier by delivering an intelligent plant disease scanner that leverages advanced technologies and innovative solutions.</p>
+                  <p className="mt-1 text-sm text-gray-400">{card.role}</p>
                 </div>
               
               </div>
@@ -375,21 +376,14 @@ const ProjectPage = () => {
                       />
                     </svg>
                     <h2 className="mt-4 text-md font-bold text-white">Persona</h2>
-                        {/* <p className="mt-1 text-sm text-gray-400">
-                          <span>The potential users of Leaf.ai, the intelligent plant disease scanner, encompass a broad spectrum of individuals and organizations involved in agriculture and plant care. These users include:</span><br></br>
-                       </p> */}
-                        <ol className='text-sm text-gray-400'>
-                          <li>- Farmers: They can quickly detect and identify plant diseases, enabling timely interventions to protect their harvests.</li>
-                          <li>- Agronomists: They can analyze disease patterns and offer tailored advice for disease management and crop optimization.</li>
-                          <li>- Researchers: Researchers can collect data from the app to study disease outbreaks, track trends, and develop new strategies for disease prevention and control.</li>
-                          <li>- Agricultural Extension Services: can leverage Leaf.ai to disseminate information to farmers and support disease monitoring and prevention programs.</li>
-                          <li>- Hobby Gardeners: to diagnose and treat diseases in their gardens and home-grown plants.</li>
-                          <li>- Educational Institutions: can be employed as an educational tool in agricultural institutions and universities </li>
-                        </ol>
+                    {card.persona.map((persona, index) => (
+                      <li className='text-sm text-gray-400' key={index}>{persona}</li>
+                    ))}
+             
                 </div>
                 
                 {/* UI interfaces */}
-                <div className=" flex flex-col w-full h-content block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10" >
+                {/* <div className=" flex flex-col w-full h-content block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10" >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-10 w-10 text-indigo-500"
@@ -411,10 +405,10 @@ const ProjectPage = () => {
                   <Image className=' mx-auto h-full w-full ' fill="true"  objectFit='cover' src={`${leafmockup.src}`} />
                   </div>
                   
-                </div>
+                </div> */}
                 
-                <div className="w-full flex flex-col gap-6 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10" >
-                    <svg
+                <div className="w-full h-content flex flex-col gap-6 block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10" >
+                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-10 w-10 text-indigo-500"
                         fill="none"
@@ -431,16 +425,18 @@ const ProjectPage = () => {
                         />
                       </svg>
                     <h2 className="mt-4 text-xl font-bold text-white">UI interfaces</h2>
-                    {/* leafui1 */}
-                    <div className='relative w-full h-48 sm:h-56 lg:h-72 '>
-                  <Image className=' mx-auto h-full w-full ' fill="true"  objectFit='cover' src={`${leafui1.src}`} />
-                  </div>
-                  <div className='relative w-full h-48 sm:h-56 lg:h-72 '>
-                  <Image className=' mx-auto h-full w-full ' fill="true"  objectFit='cover' src={`${leafui2.src}`} />
-                  </div>
-                  <div className='relative w-full h-48 sm:h-56 lg:h-72 '>
-                  <Image className=' mx-auto h-full w-full ' fill="true"  objectFit='cover' src={`${leafui3.src}`} />
-                  </div>
+                    {card.ui.map((ui, index) => (
+                      <div key={index} className='relative aspect-[4/3]'>
+                        <Image
+                          src={ui} 
+                          alt={`Image ${index}`}
+                          layout="fill"
+                          objectFit="contain"
+                          className=' w-auto'
+                        />
+                      </div>
+                    ))}
+                    
                 </div>
             </div>
 
@@ -466,12 +462,12 @@ const ProjectPage = () => {
                       />
                     </svg>
                   <h2 className="mt-4 text-md font-bold text-white">Technologies & tools</h2>
-                  <p className="mt-1 text-xs text-gray-400 text-justify">
-                    <span>- Built with React.js for a dynamic and interactive user interface.</span><br></br>
-                    <span>- UtilizesTensorFlow and Python for advanced machine learning-based disease detection.</span><br></br>
-                    <span>- Employs FastAPI for robust backend API functionality.</span><br></br>
-                    <span>- Developed using popular environments like PyCharm, Jupyter Notebook, and Visual Studio Code, highlighting a versatile toolset.</span><br></br>
-                    </p>
+                  <ul className="mt-1 grid grid-cols-3 gap-2 text-xs text-gray-400 text-justify">
+                  {card.technologies.map((technology, index) => (
+                        <li key={index} className='block p-4 bg-indigo-900 text-center rounded-md'>{technology}</li>
+                    ))}
+                    
+                    </ul>
                 </div>
 
                 {/* links & ressources */}

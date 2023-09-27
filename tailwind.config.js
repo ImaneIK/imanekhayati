@@ -19,6 +19,10 @@ module.exports = {
         animation: 'animate 25s linear infinite',
         bottom: '-150px',
       },
+
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
     },
   },
   plugins: [],

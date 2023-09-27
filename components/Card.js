@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { cardsData } from './data';
-
-
-  
+import cardsData from './data.json';  
 
 const CardGrid = () => {
   return (

@@ -1,0 +1,129 @@
+[
+  {
+    "slug": "meteor-theme",
+    "title": "Meteor theme",
+    "description": "A Shopify like Coworking spaces reservation theme",
+    "banner": "/public/leafmockup.png",
+    "excerpt": "This is a dynamic web application that offers a user-friendly platform for coworking space providers to showcase their spaces and for users to easily discover, book, and manage reservations. Drawing inspiration from Shopify's e-commerce capabilities, this theme leverages the power of Nuxt.js to create an intuitive and efficient coworking space reservation experience.",
+    "scope": "During a two-month internship at DigitalClick in Technopark Souss Massa, Agadir, I developed a dynamic web application resembling Shopify, using Nuxt.js, to create a user-friendly platform for coworking space providers and users. My responsibilities included frontend development, reservation procedure, and ensuring cross-device compatibility, resulting in a fully functional coworking space reservation platform.",
+    "role": "Frontend Developer Intern at DigitalClick, responsible for implementing a responsive coworking space reservation platform using Nuxt.js",
+    "persona": [
+      "Coworking Space Providers: These are businesses or individuals who own or manage coworking spaces and use the system to list and manage their spaces.",
+      "Individuals and Freelancers: People looking for a convenient and flexible workspace to rent for short or long periods, including freelancers, entrepreneurs, and remote workers.",
+      "Small Businesses: Small companies or startups that need flexible office space for their teams or meetings."
+    ],
+    "technologies": [
+      "Nuxt.js", "Vue.js", "Node.js",  "Tailwind", "VSC",  "Github"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/meteor-theme"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+    ]
+  },
+  {
+    "slug": "leaf-ai",
+    "title": "Leaf.ai App",
+    "description": "An intelligent plant disease scanner backed with a machine learning model",
+    "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+    "excerpt": "Using cutting-edge AI algorithms, Leaf.ai empowers farmers to detect and diagnose plant diseases with unparalleled accuracy and speed. By simply capturing images of their crops, farmers can receive instant feedback on the health of their plants, enabling them to take timely and informed actions to protect their yields.",
+    "scope": "The project's context revolves around our participation in the annual 'FEECRA' salon held at the Universiapolis campus in Agadir in May 2023. This event serves as a platform for showcasing innovative projects and ideas. Our project, Leaf.ai, was selected as the centerpiece for our stand at the salon. We proudly presented an intelligent plant disease scanner, developed using cutting-edge technologies. This outstanding project earned us the prestigious prize for the best salon stand, reflecting our dedication to innovation and excellence in the field.",
+    "role": "In the development of Leaf.ai, my role as a fullstack developer was integral to the project's success. I collaborated within a multidisciplinary team, which included experts in data science, marketing, and web development. Together, we harnessed our diverse skill sets and knowledge to create a powerful and user-friendly tool. Leaf.ai is a testament to our effective teamwork, as we worked seamlessly to make people's lives easier by delivering an intelligent plant disease scanner that leverages advanced technologies and innovative solutions.",
+    "persona": [
+      "Farmers: They can quickly detect and identify plant diseases, enabling timely interventions to protect their harvests.",
+      "Agronomists: They can analyze disease patterns and offer tailored advice for disease management and crop optimization.",
+      "Researchers: Researchers can collect data from the app to study disease outbreaks, track trends, and develop new strategies for disease prevention and control.",
+      "Hobby Gardeners: to diagnose and treat diseases in their gardens and home-grown plants. " ,
+      "Agricultural Extension Services: can leverage Leaf.ai to disseminate information to farmers and support disease monitoring and prevention programs. ",
+      "Educational Institutions: can be employed as an educational tool in agricultural institutions and universities "
+    ],
+    "technologies": [
+      "React.js", "TensorFlow", "Python",  "FastAPI","PyCharm",  "Jupyter.N", "VSC", "Github", "Pandas"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/leafai"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+    ]
+  },
+  {
+    "slug": "smart-home",
+    "title": "Smart home app",
+    "description": "A flutter mobile app to help you take control of your smart home",
+    "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+    "excerpt": "A Flutter mobile app empowering users to seamlessly manage and control their smart home devices from the convenience of their smartphones",
+    "scope":"The scope of this academic project is to design and develop a Flutter mobile application that serves as a user-friendly interface for controlling and managing various smart home devices, integrating the skills acquired during the semester",
+    "role": "As a student developer, my role was to lead the design and development of the UI of the Flutter-based mobile app, ensuring it provides intuitive control and monitoring of smart home devices.",
+    "persona": [
+      "Homeowners: People who own smart home devices and want a centralized control system.",
+      "Residents: Individuals living in smart homes who need an easy way to manage devices.",
+      "Tech Enthusiasts: Those interested in exploring and optimizing their smart home setups.",
+      "Students: For academic purposes, as part of learning about app development and IoT." ,
+      "Developers: For further customization or as a reference for building similar applications."
+    ],
+    "technologies": [
+      "Dart", "Flutter", "Android Std"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/glowing-invention"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/24/ca/b6/24cab6082ddc8b3f5b6e6a03c64a6721.jpg",
+      "https://i.pinimg.com/564x/0e/d1/a0/0ed1a0f8b09045081dc0c9ddc3ab9f7c.jpg"
+    ]
+  },
+  {
+    "slug": "bluemin",
+    "title": "Bluemin",
+    "description": "A blogging app in MEVN stack",    
+    "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+    "excerpt": "A robust MEVN stack blogging application designed for academic purposes, allowing users to effortlessly create, manage, and share their blog content, demonstrating proficiency in modern web development technologies.",
+    "scope": "The scope of this academic project involves creating a full-stack blogging application using the MEVN (MongoDB, Express.js, Vue.js, Node.js) stack, as a practical application of the knowledge gained during the semester's web development course.",
+    "role": "As a student developer, my role was to architect, develop, and deploy the MEVN-based blogging app, enabling users to create, edit, and share their blog posts while applying the concepts learned in the web development course.",
+    "persona": [
+      "Bloggers and Content Creators: Individuals interested in creating and sharing their written content, including bloggers, writers, and journalists.",
+      "Readers and Subscribers: People looking for interesting and informative blog posts to read and follow.",
+      "Students: For educational purposes, as part of coursework or projects related to web development and full-stack technologies."
+    ],
+    "technologies": [
+      "Vue.js", "Node.js", "Tailwind", "Vuetify","MongoDB", "Express.js","Auth0","VSC","GitHub"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/Bluemin"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/62/55/71/6255716c6169c2ebf5a745576536d667.jpg",
+      "https://i.pinimg.com/564x/23/d7/97/23d797d7ee0d5bab4c1a715d4c3a3e9d.jpg",
+      "https://i.pinimg.com/564x/b9/7a/bb/b97abb2e7e1883d32e0a3d1a8aa94372.jpg"
+    ]
+  },
+  {
+    "slug": "e-bazzar",
+    "title": "E-BAZAAR",
+    "description": "An E-commerce website for all the Moroccan artisans out there",
+    "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+    "excerpt": "A comprehensive e-commerce website tailored for Moroccan artisans, providing them with a dedicated platform to showcase and sell their handcrafted products, promoting local craftsmanship and supporting artisans' businesses.",
+    "scope": "As the final academeic project of our DUT, we decided to implement our knowledge aquired during these 2 years in the High School of Thechnology of Agadir ",
+    "role": "As the project lead and developer, my role was to architect and build the e-commerce website, ensuring it caters specifically to Moroccan artisans' needs, fosters a vibrant online marketplace, and adheres to best e-commerce practices.",
+    "persona": [
+      "Artisans and Craftsmen: Moroccan artisans who want to showcase and sell their handmade products to a wider audience.",
+      "Local Shoppers: Customers interested in purchasing unique, handmade Moroccan products and supporting local artisans.",
+      "Tourists: Visitors to Morocco looking for authentic and culturally significant souvenirs and gifts.",
+      "Collectors: Individuals who appreciate and collect artisanal products, such as pottery,textiles, and jewelry."    
+    ],
+    "technologies": [
+      "HTML","CSS","Javascript","PHP","MYSQL","XAMPP","VSC","Adobe XD","GitHub"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/PFE.git"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+    ]
+  }
+]

@@ -1,6 +1,18 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     images: {
-      domains: ['images.unsplash.com'], 
+      remotePatterns:[
+        {
+          protocol:'https',
+          hostname:'**'
+        }
+      ],
+      domains: ['**'],
+      minimumCacheTTL:1500000,
     },
+    experimental: {
+      images: {
+          allowFutureImage: true,
+      }
+  }
   };
