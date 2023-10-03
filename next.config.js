@@ -10,9 +10,5 @@ module.exports = {
       domains: ['**'],
       minimumCacheTTL:1500000,
     },
-    experimental: {
-      images: {
-          allowFutureImage: true,
-      }
-  }
+
   };

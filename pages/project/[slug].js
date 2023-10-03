@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import cardsData from '../../components/data.json';  
 import Image from "next/image";
-import CaseStudy from "@/components/CaseStudy";
 
 const ProjectPage = () => {
   const router = useRouter();
@@ -489,7 +488,10 @@ const ProjectPage = () => {
                         />
                       </svg>
                     <h2 className="mt-4 text-md font-bold text-white">Links & ressources</h2>
-                    <a href='https://github.com/ImaneIK/leafai' className="mt-1 text-sm text-gray-400">Github link</a>
+                    
+                    {card.resources.map((link, index) => (
+                        <Link href={link} className="mt-1 text-sm text-gray-400">Github link</Link>
+                    ))}
                 </div>
             </div>
           </div>
