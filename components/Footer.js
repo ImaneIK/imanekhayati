@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
           
           {/* footer links */}
-          <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+          {/* <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
               <a href="#" className="text-gray-400 transition hover:opacity-75">
                 Terms & Conditions
@@ -41,7 +41,7 @@ export default function Footer() {
                 Cookies
               </a>
             </li>
-          </ul>
+          </ul> */}
 
             {/* social media */}
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
