@@ -1,60 +1,16 @@
+import Navbar from '/components/navbar'
+import Footer from '/components/Footer'
+import Menu from '/components/menu'
+
 export default function About() {
   const googleDriveLink =
     "https://drive.google.com/file/d/15ajVIrGgfJNLY7382Ud-QwZtz-8Tgp9w/view?usp=sharing ";
   return (
-    <div className="pb-12">
-      <div class="mx-auto md:mx-0 max-w-screen-xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-        <div class="flex-1 md:flex md:items-center md:gap-12">
-          <a class="block text-gray-500" href="/">
-            {" "}
-            IKONIK{" "}
-          </a>
-        </div>
+    <div className="p-6">
+      <Menu />
+      <Navbar className="p-6"/>
 
-        <div class="md:flex md:items-center md:gap-12">
-          <nav aria-label="Global" class="hidden md:block">
-            <ul class="flex items-center gap-6 text-sm">
-              <li>
-                <a
-                  class="text-gray-500 transition hover:text-gray-500/75"
-                  href="/about"
-                >
-                  about
-                </a>
-              </li>
-
-              <li>
-                <a
-                  class="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  skills
-                </a>
-              </li>
-
-              <li>
-                <a
-                  class="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  portfolio
-                </a>
-              </li>
-
-              <li>
-                <a
-                  class="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  get in touch
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
-      <div className="relative overflow-x-hidden gap-4 px-4 lg:px-24 flex flex-col md:flex-row w-full">
+      <div className="pt-6 relative overflow-x-hidden gap-4 px-4 lg:px-24 flex flex-col md:flex-row w-full">
         <div className="w-full flex flex-col gap-4 md:w-1/3">
           {/* Name and cv link */}
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
@@ -342,6 +298,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 }

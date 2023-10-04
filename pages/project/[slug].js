@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import cardsData from '../../components/data.json';  
 import Image from "next/image";
+import logo from '/public/logo1.png'
+import Menu from '/components/menu'
 
 const ProjectPage = () => {
   const router = useRouter();
@@ -15,12 +17,15 @@ const ProjectPage = () => {
     return <div>Card not found</div>;
 }
   return (
-    <div className="flex h-screen overflow-x-hidden">
+    <div className='pb-24 md:pb-0'>
+      <Menu />
+          <div className="flex h-screen overflow-x-hidden">
+      
       {/* sidebar */}
       <div  className='invisible md:visible  w-1/18 fixed flex flex-col justify-between p-2 h-full border-r border-gray-800'>
         <div className=" mb-10">
             <a className='text-gray-500 font-semibold text-sm' href="/">
-              IKONIK
+            <Image className="rotate-90" height={45} width={45} src={logo}></Image> 
             </a>
             <div className="mt-10">
               <ul>
@@ -461,7 +466,7 @@ const ProjectPage = () => {
                       />
                     </svg>
                   <h2 className="mt-4 text-md font-bold text-white">Technologies & tools</h2>
-                  <ul className="mt-1 grid grid-cols-3 gap-2 text-xs text-gray-400 text-justify">
+                  <ul className="mt-1 grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-gray-400 text-justify">
                   {card.technologies.map((technology, index) => (
                         <li key={index} className='block p-4 bg-indigo-900 text-center rounded-md'>{technology}</li>
                     ))}
@@ -497,6 +502,8 @@ const ProjectPage = () => {
           </div>
         </div>
     </div>
+    </div>
+
   );
 };
 
