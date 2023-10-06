@@ -11,7 +11,7 @@ export default function Root() {
       {/* <Circles/> */}
       <Home/>
       <Projects/>
-        <Form/>
+      <Form/>
       <Footer/>
     </div>
     

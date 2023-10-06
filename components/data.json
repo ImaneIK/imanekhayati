@@ -125,5 +125,28 @@
       "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
       "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
     ]
+  },
+  {
+    "slug": "workfolio-wonders",
+    "title": "Workfolio Wonders",
+    "description": "The portfolio website gathering all my projects so far",
+    "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    "scope": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "role": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "persona": [
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+    ],
+    "technologies": [
+      "HTML","CSS","Javascript","PHP","MYSQL","XAMPP","VSC","Adobe XD","GitHub"
+    ],
+    "resources": [
+      "https://github.com/ImaneIK/PFE.git"
+    ],
+    "ui": [
+      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
+      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+    ]
   }
 ]

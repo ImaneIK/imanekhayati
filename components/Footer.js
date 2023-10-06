@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         {/* <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-300 sm:text-5xl">
-            Customise Your Product
+            Customize Your Product
           </h2>
 
           <p className="mx-auto mt-4 max-w-sm text-gray-300">
@@ -23,25 +23,25 @@ export default function Footer() {
         <div className="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
           
           {/* footer links */}
-          {/* <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+          <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
-              <a href="#" className="text-gray-400 transition hover:opacity-75">
-                Terms & Conditions
+              <a href="/portfolio" className="text-gray-400 transition hover:opacity-75">
+                Portfolio
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-400 transition hover:opacity-75">
-                Privacy Policy
+              <a href="/about" className="text-gray-400 transition hover:opacity-75">
+                About me
               </a>
             </li>
 
             <li>
-              <a href="#" className="text-gray-400 transition hover:opacity-75">
-                Cookies
+              <a href="/#contact" className="text-gray-400 transition hover:opacity-75">
+                Contact
               </a>
             </li>
-          </ul> */}
+          </ul>
 
             {/* social media */}
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">

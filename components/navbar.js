@@ -15,7 +15,16 @@ export default function Navbar(){
         {/* navbar */}
         <div className="md:flex md:items-center md:gap-12 hidden md:block">
           <nav aria-label="Global" className="">
-            <ul className="flex items-center gap-6 text-sm">
+            <ul className="flex items-center gap-6 text-sm capitalize">
+              <li>
+                <a
+                  className="text-gray-500 transition hover:text-gray-500/75"
+                  href="/"
+                >
+                  home
+                </a>
+              </li>
+
               <li>
                 <a
                   className="text-gray-500 transition hover:text-gray-500/75"
@@ -28,16 +37,7 @@ export default function Navbar(){
               <li>
                 <a
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  skills
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
+                  href="/portfolio"
                 >
                   portfolio
                 </a>
@@ -46,7 +46,7 @@ export default function Navbar(){
               <li>
                 <a
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="/"
+                  href="/#contact"
                 >
                   get in touch
                 </a>
