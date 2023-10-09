@@ -1,5 +1,24 @@
 /* Home.module.css */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
+@keyframes blink-caret {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #000; /* Adjust the color as needed */
+  }
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
   
   /* Define the parent class for the pseudo-element */
   .bg::before {
@@ -98,4 +117,20 @@
     left: 20%;
     opacity: 0.6; /* Adjust as needed */
   }
+
+
+  
+
+
+  .typinganimation { 
+	font: bold 300% Consolas, Monaco, monospace;
+	border-right: .1em solid black;
+	width: 16.5em; 
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
   

@@ -1,6 +1,6 @@
 export default function Menu(){
     return(
-        <div className=" block md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-indigo-700 dark:border-gray-600">
+        <div className=" block md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-gradient-to-r from-[#01123b] to-[#00040b] ">
             <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
                 {/* home */}
                 <a href="/" type="button" className="inline-flex flex-col items-center justify-center px-5 hover:bg-indigo-50 dark:hover:bg-indigo-800 group">

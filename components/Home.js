@@ -11,7 +11,7 @@ export default function Home() {
    
       <Menu />
      
-      <div className={[styles.sliderthumb,"w-full md:h-full p-4 md:p-12 2xl:p-24"] }>
+      <div className={[styles.sliderthumb,"w-full md:h-full p-4 md:p-12 2xl:p-24 font-sans "] }>
         
         <div className="block bg-blue-800 bg-opacity-10 backdrop-blur-xl flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-6 md:p-12 lg:p-4 overflow-hidden">
        
@@ -22,11 +22,12 @@ export default function Home() {
           <div className="flex flex-col  lg:flex-row items-center justify-between py-4 lg:py-0 gap-8 lg:gap-0">
 
             <div className="relative text-left w-full text-center ">
-              <h1 className="text-sm text-gray-400 md:text-lg xl:text-xl xl:my-2">
+              <h1 className="text-sm text-gray-400 md:text-lg xl:text-lg xl:my-2">
               Embarking on a journey
               </h1>
-              <p className="text-4xl md:text-8xl font-bold text-gray-300 md:w-2/3  mx-auto">
-              withing the ode to webcraft
+              <p className="text-4xl md:text-8xl font-extrabold text-gray-300 md:w-3/4  mx-auto" >
+
+              <span >withing the ode to webcraft</span>
               </p>
               <h1 className="text-sm text-gray-400 md:text-lg xl:text-xl xl:my-4">
               weaving together lines of code

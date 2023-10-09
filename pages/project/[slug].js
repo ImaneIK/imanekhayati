@@ -83,7 +83,7 @@ const ProjectPage = () => {
        
             
               <div  class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row items-center md:justify-between md:gap-4">
+                {/* <div class="flex flex-col md:flex-row items-center md:justify-between md:gap-4">
                   <div class="relative hidden sm:block">
                     <label class="sr-only" for="search"> Search </label>
 
@@ -193,11 +193,11 @@ const ProjectPage = () => {
                       class="group flex shrink-0 items-center rounded-lg transition"
                     >
                       <span class="sr-only">Menu</span>
-                      {/* <img
+                      <img
                         alt="Man"
                         src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                         class="h-10 w-10 rounded-full object-cover"
-                      /> */}
+                      /> 
 
                       <p class="ms-2 hidden text-left text-xs sm:block">
                         <strong class="block font-medium">Imane Khayati</strong>
@@ -219,7 +219,7 @@ const ProjectPage = () => {
                       </svg>
                     </button>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="mt-8">
                
