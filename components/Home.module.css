@@ -122,7 +122,7 @@
   
 
 
-  .typinganimation { 
+  /* .typinganimation { 
 	font: bold 300% Consolas, Monaco, monospace;
 	border-right: .1em solid black;
 	width: 16.5em; 
@@ -132,5 +132,5 @@
 	overflow: hidden;
 	-webkit-animation: typing 2s steps(21, end),
 	           blink-caret .5s step-end infinite alternate;
-}
+} */
   

@@ -1,19 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTheme } from "@/pages/_app";
 import cardsData from './data.json';  
 
 const CardGrid = () => {
+  const { theme } = useTheme();
+  const lightThemeClass = "block rounded-xl border p-8 shadow-xl transition  border border-green-700  hover:border-green-300/10 hover:shadow-green-800/10"; 
+  const darkThemeClass = "block rounded-xl border p-8 shadow-xl transition  border border-gray-200 hover:border-indigo-500/10 hover:shadow-indigo-500/10";
   return (
-    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {cardsData.map((card, index) => (
         <Link
           key={index}
-          className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10"
+          className={theme ===  'dark' ? darkThemeClass : lightThemeClass}
           href={`/project/${card.slug}`}
         >
           <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10 text-indigo-500"
+              class="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -27,8 +31,8 @@ const CardGrid = () => {
                 d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
               />
             </svg>
-          <h2 className="mt-4 text-xl font-bold text-white">{card.title}</h2>
-          <p className="mt-1 text-sm text-gray-300">{card.description}</p>
+          <h2 className="mt-4 text-xl font-bold ">{card.title}</h2>
+          <p className="mt-1 text-sm ">{card.description}</p>
         </Link>
       ))}
     </div>
