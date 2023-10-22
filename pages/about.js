@@ -13,7 +13,7 @@ export default function About() {
       <div className="pt-6 relative overflow-x-hidden gap-4 md:px-4 lg:px-24 flex flex-col md:flex-row w-full">
         <div className="w-full flex flex-col gap-4 md:w-1/3">
           {/* Name and cv link */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -46,7 +46,7 @@ export default function About() {
             </a>
           </div>
           {/* infos */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -81,7 +81,7 @@ export default function About() {
             </div>
           </div>
           {/* skills */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10 "
@@ -113,7 +113,7 @@ export default function About() {
 
         <div className="flex flex-col gap-4 w-full md:w-2/3">
           {/* About me */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10 "
@@ -147,7 +147,7 @@ export default function About() {
             </p>
           </div>
           {/* experience */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10 "
@@ -257,7 +257,7 @@ export default function About() {
             </ul>
           </div>
           {/* education */}
-          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/10">
+          <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
