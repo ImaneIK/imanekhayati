@@ -1,7 +1,10 @@
 import Card from './Card'
 import { useTheme } from "@/pages/_app";
 
-export default function Projects() {
+
+export default function Projects({projects}) {
+  
+
   const { theme } = useTheme();
   const lightThemeClass = " border border-green-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
   const darkThemeClass = " border border-gray-200 inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition";
@@ -18,9 +21,9 @@ export default function Projects() {
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>
-            
-        <Card/>
-        
+        {/* {projects.map((project) => (  
+        <Card title={project.title} description={project.description}/>
+        ))} */}
         {/* CTA button */}
         <div className="mt-12 text-center">
           <a
@@ -34,3 +37,23 @@ export default function Projects() {
     </section>
   );
 }
+
+
+// export async function getServerSideProps() {
+//   try {
+//       const client = await clientPromise;
+//       const db = client.db("portfolio");
+
+//       const projects = await db
+//           .collection("projects")
+//           .find({})
+//           .sort({ metacritic: -1 })
+//           .toArray();
+
+//       return {
+//           props: { projects: JSON.parse(JSON.stringify(projects)) },
+//       };
+//   } catch (e) {
+//       console.error(e);
+//   }
+// }

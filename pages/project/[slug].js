@@ -273,7 +273,7 @@ const ProjectPage = () => {
                   <p className="mt-1 text-sm ">{card.excerpt}</p>
                 </div>
               
-                <div className='flex flex-row gap-4 w-full justify-center'>
+                <div className='flex flex-col lg:flex-row gap-4 w-full justify-center'>
                 
                 {/* scope */}
                 <div className=" block rounded-xl border border-gray-800 p-8 shadow-xl transition " >

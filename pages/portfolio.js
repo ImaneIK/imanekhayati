@@ -1,3 +1,4 @@
+import clientPromise from "/lib/mongodb";
 import Toggle from '@/components/Toggle';
 import { useTheme } from "@/pages/_app";
 import 'tailwindcss/tailwind.css';
@@ -6,8 +7,27 @@ import logo from '/public/logo1.png';
 import Menu from '/components/menu';
 import Card from '/components/Card';
 
+export async function getServerSideProps() {
+  try {
+      const client = await clientPromise;
+      const db = client.db("portfolio");
 
-const Portfolio = () => {  
+      const projects = await db
+          .collection("projects")
+          .find({})
+          .sort({ metacritic: -1 })
+          .toArray();
+
+      return {
+          props: { projects: JSON.parse(JSON.stringify(projects)) },
+      };
+  } catch (e) {
+      console.error(e);
+  }
+}
+
+
+const Portfolio = ({projects}) => {  
   const { theme } = useTheme();
   const darktimageSrc="https://i.pinimg.com/564x/21/f9/91/21f991bc270bca7402b6b2833ac65336.jpg";
   const lightimageSrc="https://i.pinimg.com/736x/2a/8a/a9/2a8aa9692dd34cacdaddccbd947d3e21.jpg";
@@ -67,7 +87,7 @@ const Portfolio = () => {
       </div>
 
 
-      <div className='md:ml-16  '>
+      <div className='md:ml-16  w-full'>
         <div className='relative'>
            
            <Image 
@@ -235,8 +255,10 @@ const Portfolio = () => {
            </div>
        </div>
 
-       <div className='md:mx-8 p-4 md:p-0'>
-            <Card />
+       <div className='md:mx-8 p-4 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8'>
+                {projects.map((project) => (
+                     <Card title={project.title} description={project.description} link={project.slug}/>
+                ))}
         </div>
 
         </div>
@@ -247,3 +269,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
