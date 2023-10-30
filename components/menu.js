@@ -1,4 +1,5 @@
 import { useTheme } from "@/pages/_app";
+import Toggle from "./Toggle";
 
 export default function Menu(){
     const { theme } = useTheme();
@@ -22,12 +23,16 @@ export default function Menu(){
                     <span className="text-sm">Projects</span>
                 </a>
                 {/*settings */}
-                <button type="button" className="inline-flex flex-col items-center justify-center px-5 group">
+                {/* <button type="button" className="inline-flex flex-col items-center justify-center px-5 group">
                     <svg className="w-5 h-5 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
                     </svg>
                     <span className="text-sm">Settings</span>
-                </button>
+                </button> */}
+                <div className="inline-flex flex-col items-center justify-center px-5 group text-center">
+                <Toggle></Toggle>
+                <span className="text-sm">mode</span>
+                </div>
                 {/* about me */}
                 <a href="/about" type="button" className="inline-flex flex-col items-center justify-center px-5group">
                     <svg className="w-5 h-5 mb-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
