@@ -390,14 +390,21 @@ const ProjectPage = () => {
                       </svg>
                     <h2 className="mt-4 text-xl font-bold">UI interfaces</h2>
                     {card.ui.map((ui, index) => (
-                      <div key={index} className='relative aspect-[4/3]'>
+                      <div key={index} className='relative aspect-4/3' >
                         <Image
                           src={ui} 
                           alt={`Image ${index}`}
                           layout="fill"
                           objectFit="contain"
-                          className=' w-auto'
+                          sizes="2000px"
+                          className=' w-full'
                         />
+                        {/* <Image
+                          src={ui} 
+                          alt={`Image ${index}`}
+                          width={1920}
+                          height={7242}
+                        /> */}
                       </div>
                     ))}
                     

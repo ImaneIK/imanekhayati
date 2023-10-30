@@ -19,8 +19,11 @@
       "https://github.com/ImaneIK/meteor-theme"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
-      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+      "https://i.pinimg.com/236x/5f/66/25/5f66259b22bbc243320236e74fa926f8.jpg",
+      "https://i.pinimg.com/236x/03/6f/e3/036fe311ef78a6a8533c874a83e90127.jpg",
+      "https://i.pinimg.com/236x/42/47/e9/4247e978b337ceb80dd377fd79e6c0d6.jpg",
+      "https://i.pinimg.com/236x/e2/91/a9/e291a9c73ed1f1953ef59e2c194bb68d.jpg",
+      "https://i.pinimg.com/236x/70/bc/89/70bc894ae7ed0d43a9a0989bfb31664b.jpg"
     ]
   },
   {
@@ -47,8 +50,7 @@
       "https://github.com/ImaneIK/leafai"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
-      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+      "https://i.pinimg.com/564x/bc/13/e2/bc13e247d6f8d19608296bbd3a7759db.jpg"
     ]
   },
   {
@@ -73,14 +75,20 @@
       "https://github.com/ImaneIK/glowing-invention"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/24/ca/b6/24cab6082ddc8b3f5b6e6a03c64a6721.jpg",
-      "https://i.pinimg.com/564x/0e/d1/a0/0ed1a0f8b09045081dc0c9ddc3ab9f7c.jpg"
+      "https://i.pinimg.com/474x/7d/00/7d/7d007da5834343add3b6e3a07dd54168.jpg",
+      "https://i.pinimg.com/474x/70/5d/bb/705dbbf5263bb69acec95c4944b27e51.jpg",
+      "https://i.pinimg.com/474x/53/8c/3b/538c3b61cb89cfcf4237839d0d1f0412.jpg",
+      "https://i.pinimg.com/474x/b2/3f/95/b23f959d57cece727110f2c3c109650e.jpg",
+      "https://i.pinimg.com/474x/2d/56/48/2d564883cb158b0f2aeeb5e5ae1d4f7b.jpg",
+      "https://i.pinimg.com/474x/06/a8/a6/06a8a60e5a2fbddbb274583f4064188b.jpg",
+      "https://i.pinimg.com/474x/80/08/d5/8008d52b73144eac837731d19be70aab.jpg",
+      "https://i.pinimg.com/474x/ea/77/84/ea77841f22df6da0327cafe7d3899634.jpg"
     ]
   },
   {
     "slug": "bluemin",
     "title": "Bluemin",
-    "description": "A blogging app in MEVN stack",    
+    "description": "A blogging app in MEVN stack ( Mongodb, Express.js, Vue.js, Node.js, Vuetify)",    
     "banner": "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
     "excerpt": "A robust MEVN stack blogging application designed for academic purposes, allowing users to effortlessly create, manage, and share their blog content, demonstrating proficiency in modern web development technologies.",
     "scope": "The scope of this academic project involves creating a full-stack blogging application using the MEVN (MongoDB, Express.js, Vue.js, Node.js) stack, as a practical application of the knowledge gained during the semester's web development course.",
@@ -97,9 +105,8 @@
       "https://github.com/ImaneIK/Bluemin"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/62/55/71/6255716c6169c2ebf5a745576536d667.jpg",
-      "https://i.pinimg.com/564x/23/d7/97/23d797d7ee0d5bab4c1a715d4c3a3e9d.jpg",
-      "https://i.pinimg.com/564x/b9/7a/bb/b97abb2e7e1883d32e0a3d1a8aa94372.jpg"
+      "https://i.pinimg.com/564x/c6/5c/18/c65c18f2198d3a65c0fbaff3af16f063.jpg",
+      "https://i.pinimg.com/474x/18/a7/b7/18a7b7fd44d7c84287ab2e0f066913f8.jpg"
     ]
   },
   {
@@ -123,8 +130,7 @@
       "https://github.com/ImaneIK/PFE.git"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
-      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
+      
     ]
   },
   {
@@ -146,8 +152,6 @@
       "https://github.com/ImaneIK/PFE.git"
     ],
     "ui": [
-      "https://i.pinimg.com/564x/85/86/eb/8586eb374a2f2283bc2711c947a7e527.jpg",
-      "https://i.pinimg.com/564x/5b/a5/0a/5ba50a2acd907ed0db803568e4030c7d.jpg"
     ]
   }
 ]
