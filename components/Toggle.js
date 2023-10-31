@@ -21,7 +21,7 @@ export default function Toggle() {
 
   return (
     <div
-      className="flex justify-center  rounded-full items-center p-1"
+      className="flex justify-center  rounded-full items-center"
       onClick={toggleTheme}
     >
       { theme === 'dark' ? (

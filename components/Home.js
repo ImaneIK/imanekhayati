@@ -59,7 +59,8 @@ export default function Home() {
               on a mission to create captivating online experiences. 
               Turning ideas into pixel-perfect reality, 
               one line of code at a time.</h4>   
-            <p className="block text-xs w-1/5 lg:w-1/8 text-center">v.0</p>
+              
+            {/* <p className="block text-xs w-1/5 lg:w-1/8 text-center">v.0</p> */}
           </div>
        
         </div>

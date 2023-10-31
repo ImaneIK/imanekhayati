@@ -15,6 +15,7 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
+    // document.body.dataset.theme = theme;
   }, [theme]);
 
   return (
@@ -33,5 +34,14 @@ export function useTheme() {
 }
 
 export default function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+            const loader = document.getElementById('globalLoader');
+        if (loader)
+            loader.style.display = 'none';
+    }
+}, []);
+
+
   return <ThemeProvider><Component {...pageProps} /></ThemeProvider>
 }
