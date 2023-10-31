@@ -18,42 +18,23 @@ display: block;
     justify-content: center;
     align-items: center;
 }
+
+
+
 .loader {
- --clr: #01123b;
- /* color of spining  */
- width: 50px;
- height: 50px;
- position: relative;
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
 }
-.loader div:nth-child(1), .loader div:nth-child(2) {
- content: "";
- position: absolute;
- top: -10px;
- left: -10px;
- width: 100%;
- height: 100%;
- border-radius: 100%;
- border: 10px solid transparent;
- border-top-color: var(--clr);
-}
-.loader div:nth-child(1) {
- z-index: 100;
- animation: spin 1s infinite;
-}
-.loader div:nth-child(2) {
- border: 10px solid #ccc;
-}
-@keyframes spin {
- 0% {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
- }
- 100% {
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
- }
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
 }`;
