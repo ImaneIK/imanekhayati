@@ -11,6 +11,7 @@ class MyDocument extends Document {
                     <style>
                         {loader}
                     </style>
+                    <link rel="icon" href="/public/static/favicon.ico" />
                 </head>
                 <body>
                 <div id={'globalLoader'}>

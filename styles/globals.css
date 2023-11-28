@@ -44,9 +44,9 @@ html{
 
 body,
 body[data-theme="light"] {
-  --color-text-primary: #20550e;
-  --color-text-secondary: #076963;
-  --color-bg-primary: linear-gradient(90deg, #cfecd0, #ffc5ca);
+  --color-text-primary: #073789;
+  --color-text-secondary: #0445b4;
+  --color-bg-primary: linear-gradient(90deg, #ebf1ff, #cbdbff);
   --color-bg-toggle: #1e90ff;
 }
 

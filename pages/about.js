@@ -40,7 +40,7 @@ export default function About() {
               rel="noopener noreferrer"
               download
             >
-              <button className="my-4 text-xs p-2 rounded-md border ">
+              <button className="my-4 text-xs p-2 rounded-md border border-gray-800">
                 Download Resume
               </button>
             </a>

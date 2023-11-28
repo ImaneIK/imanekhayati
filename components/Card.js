@@ -5,8 +5,8 @@ import cardsData from './data.json';
 
 const CardGrid = ({title,description,link}) => {
   const { theme } = useTheme();
-  const lightThemeClass = "block rounded-xl border p-8 shadow-xl transition  border border-green-700  hover:border-green-300/10 hover:shadow-green-800/10"; 
-  const darkThemeClass = "block rounded-xl border p-8 shadow-xl transition  border border-gray-200 hover:border-indigo-500/10 hover:shadow-indigo-500/10";
+  const lightThemeClass = "block rounded-xl p-8 shadow-xl transition  border border-green-700  hover:border-green-300/10 hover:shadow-green-800/10"; 
+  const darkThemeClass = "block rounded-xl p-8 shadow-xl transition  border border-gray-200 hover:border-indigo-500/10 hover:shadow-indigo-500/10";
   return (
     <div className="mt-4">
      

@@ -8,7 +8,7 @@ export default function Home() {
   const { theme } = useTheme();
   const lightThemeClass = " border border-green-600  w-12 h-0 lg:w-0 lg:h-12 mx-auto"; 
   const darkThemeClass = " border border-gray-200 w-12 h-0 lg:w-0 lg:h-12 mx-auto";
-  const lightThemehero = "block bg-white bg-opacity-20 backdrop-blur-md flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-6 md:p-12 lg:p-4 overflow-hidden";
+  const lightThemehero = "block bg-white bg-opacity-20 backdrop-blur-md border border-green-800 flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-6 md:p-12 lg:p-4 overflow-hidden";
   const darkThemehero = "block bg-indigo-500 bg-opacity-10 backdrop-blur-md flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-6 md:p-12 lg:p-4 overflow-hidden";
 
   return (
