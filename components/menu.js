@@ -1,9 +1,10 @@
 import { useTheme } from "@/pages/_app";
 import Toggle from "./Toggle";
 
+
 export default function Menu(){
     const { theme } = useTheme();
-    const lightThemeClass = "bg-gradient-to-r from-[#cfecd0] to-[#ffc5ca] block md:hidden fixed bottom-0 left-0 z-50 w-full h-16"; 
+    const lightThemeClass = "bg-gradient-to-r from-[#ebf1ff] to-[#cbdbff] block md:hidden fixed bottom-0 left-0 z-50 w-full h-16"; 
     const darkThemeClass = " bg-gradient-to-r from-[#01123b] to-[#00040b] block md:hidden fixed bottom-0 left-0 z-50 w-full h-16";
     return(
         // bg-gradient-to-r from-[#cfecd0] to-[#ffc5ca]
