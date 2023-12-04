@@ -8,6 +8,10 @@ module.exports = {
  
   theme: {
     extend: {
+
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      },
       
       circle1: {
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
