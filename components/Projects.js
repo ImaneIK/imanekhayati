@@ -6,7 +6,7 @@ export default function Projects({projects}) {
   
 
   const { theme } = useTheme();
-  const lightThemeClass = " border border-green-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
+  const lightThemeClass = " border border-blue-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
   const darkThemeClass = " border border-gray-200 inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition";
   return (
     <section class="">

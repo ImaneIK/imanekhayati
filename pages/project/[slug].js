@@ -11,8 +11,8 @@ import Menu from '/components/menu'
 const ProjectPage = () => {
 
   const { theme } = useTheme();
-  const darktimageSrc="https://i.pinimg.com/564x/21/f9/91/21f991bc270bca7402b6b2833ac65336.jpg";
-  const lightimageSrc="https://i.pinimg.com/736x/2a/8a/a9/2a8aa9692dd34cacdaddccbd947d3e21.jpg";
+  const darktimageSrc="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+  const lightimageSrc="https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
   const router = useRouter();
   const { slug } = router.query;
@@ -95,7 +95,8 @@ const ProjectPage = () => {
        
             
               <div  class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-                {/* <div class="flex flex-col md:flex-row items-center md:justify-between md:gap-4">
+                {/* this is hidden */}
+                <div class="flex flex-col md:flex-row hidden items-center md:justify-between md:gap-4">
                   <div class="relative hidden sm:block">
                     <label class="sr-only" for="search"> Search </label>
 
@@ -231,7 +232,7 @@ const ProjectPage = () => {
                       </svg>
                     </button>
                   </div>
-                </div> */}
+                </div>
 
                 <div class="mt-8">
                

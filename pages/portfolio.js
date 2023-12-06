@@ -29,8 +29,8 @@ export async function getServerSideProps() {
 
 const Portfolio = ({projects}) => {  
   const { theme } = useTheme();
-  const darktimageSrc="https://i.pinimg.com/564x/21/f9/91/21f991bc270bca7402b6b2833ac65336.jpg";
-  const lightimageSrc="https://i.pinimg.com/736x/2a/8a/a9/2a8aa9692dd34cacdaddccbd947d3e21.jpg";
+  const darktimageSrc="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+  const lightimageSrc="https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
  
 
 
@@ -97,7 +97,7 @@ const Portfolio = ({projects}) => {
            // sizes='(max-width:768px) 100vw, 7OOpx'
            priority
            objectFit="cover"
-           className=' brightness-50 -z-10'
+           className=' -z-10 object-contain'
            />
     
          
@@ -105,11 +105,11 @@ const Portfolio = ({projects}) => {
 
              <div class="mt-4 text-center md:text-left my-4">
             
-             <h2 className="text-3xl font-extrabold text-gray-300 sm:text-4xl">
+             <h2 className="text-3xl font-extrabold text-gray-100 sm:text-4xl">
           Explore our projects
           </h2>
 
-          <p class="mt-4 text-gray-300">
+          <p class="mt-4 text-gray-100">
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
              </div>
