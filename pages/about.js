@@ -5,6 +5,7 @@ import Menu from '/components/menu'
 export default function About() {
   const googleDriveLink =
     "https://drive.google.com/file/d/15ajVIrGgfJNLY7382Ud-QwZtz-8Tgp9w/view?usp=sharing ";
+  const fr_cv_link = "https://drive.google.com/file/d/1QpO3wmESDiRmNxjP8qIJP_CYT9mQGDDf/view?usp=sharing";
   return (
     <div className="p-6">
       <Menu />
@@ -13,6 +14,7 @@ export default function About() {
       <div className="pt-6 relative overflow-x-hidden gap-4 md:px-4 lg:px-24 flex flex-col md:flex-row w-full">
         <div className="w-full flex flex-col gap-4 md:w-1/3">
           {/* Name and cv link */}
+         
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,17 +36,47 @@ export default function About() {
               Imane Khayati
             </h1>
             <p className="mt-1 text-md ">Web Developper</p>
-            <a
+             {/* Fr link */}
+          <a className='block'
+              href={fr_cv_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <button className="my-4 text-xs p-2 rounded-md border border-gray-800">
+                Download Resume (FR)
+              </button>
+            </a>
+
+            {/* CVs */}
+             {/* <div className='flex flex-nowrap gap-2'>
+            <a className='block'
               href={googleDriveLink}
               target="_blank"
               rel="noopener noreferrer"
               download
             >
               <button className="my-4 text-xs p-2 rounded-md border border-gray-800">
-                Download Resume
+                English CV
               </button>
             </a>
+          <a className='block'
+              href={googleDriveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <button className="my-4 text-xs p-2 rounded-md border border-gray-800">
+                Frensh CV
+              </button>
+            </a>
+            </div>  */}
+            
           </div>
+
+          
+          
+
           {/* infos */}
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
@@ -72,7 +104,7 @@ export default function About() {
 
             <div className="flex items-center justify-between">
               <p className="mt-1 text-sm">Period</p>
-              <p className="mt-1 text-xs">6 months</p>
+              <p className="mt-1 text-xs">4-6 months</p>
             </div>
 
             <div className="flex items-center justify-between">
@@ -80,6 +112,8 @@ export default function About() {
               <p className="mt-1 text-xs">Yes</p>
             </div>
           </div>
+
+
           {/* skills */}
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition ">
             <svg
@@ -109,6 +143,7 @@ export default function About() {
               <p className="mt-1 text-center border rounded-md p-2">Flutter</p>
             </div>
           </div>
+
         </div>
 
         <div className="flex flex-col gap-4 w-full md:w-2/3">
@@ -131,7 +166,7 @@ export default function About() {
               />
             </svg>
             <h2 className="mt-4 text-lg font-bold ">About me</h2>
-            <p className="mt-1 text-sm ">
+            <p className="mt-1 text-sm text-justify">
               I'm a passionate web developer with a love for coding and
               problem-solving and a determination to
               create user-friendly websites. As an enthusiastic
@@ -146,6 +181,7 @@ export default function About() {
               something amazing together!
             </p>
           </div>
+          
           {/* experience */}
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
@@ -178,16 +214,7 @@ export default function About() {
                 
               </li>
 
-              <li className="py-4">
-                <div className="flex justify-between">
-                    <p className="mt-1 text-sm font-semibold">
-                    FEECRA EXPO | Best Exhibition Stand Award  
-                    </p>
-                    <p className="mt-1 text-sm">12 & 13 May 2023</p>
-                </div>
-                <p className="mt-1 text-sm"> Host organization: UNIVERSIAPOLIS Agadir </p>
-                <p className="mt-1 text-sm"> Theme: Creation and Implementation of a Coworking Reservation Theme using Nuxt.js  </p>
-              </li>
+             
 
               <li className="py-4">
                 <div className="flex justify-between">
@@ -235,19 +262,18 @@ export default function About() {
                 <p className="mt-1 text-sm"> Host organization: Agadir
                   multi-service autonomous agency (RAMSA).</p>
                 <p className="mt-1 text-sm"> Theme: Design and
-                  Development of a Mobile Application for RAMSA Certificate </p>
+                  Development of a Mobile Application for RAMSA Certificates </p>
               </li>
 
 
               <li className="py-4">
                 <div className="flex justify-between">
                   <p className="mt-1 text-sm font-semibold">
-                  Provision Final Academic Projects | PFE
+                   Final Academic Projects | PFE
                     </p>
                     <p className="mt-1 text-sm">January to April 2021</p>
                 </div>
-                <p className="mt-1 text-sm"> Organization: High School of Technology Agadir
-                  multi-service autonomous agency (RAMSA).</p>
+                <p className="mt-1 text-sm"> Organization: High School of Technology Agadir</p>
                 <p className="mt-1 text-sm"> Theme: Design
                   and Development of an E-Commerce Purchasing System for
                   Moroccan Artisanal Products </p>
@@ -256,6 +282,7 @@ export default function About() {
         
             </ul>
           </div>
+
           {/* education */}
           <div className="w-full block rounded-xl border border-gray-800 p-8 shadow-xl transition">
             <svg
@@ -278,19 +305,19 @@ export default function About() {
             <ul>
               <li className="flex justify-between">
                 <p className="mt-1 text-sm">
-                  5th year majoring in software engineering{" "}
+                  Software engineering curriculum{" "}
                 </p>
-                <p className="mt-1 text-sm">2023-Now</p>
+                <p className="mt-1 text-sm">2021-Now</p>
               </li>
               <li className="flex justify-between">
                 <p className="mt-1 text-sm">
-                  DUT in Computer Science
+                  Diploma of technology in Computer Science (DUT)
                 </p>
                 <p className="mt-1 text-sm">2019-2021</p>
               </li>
               <li className="flex justify-between">
                 <p className="mt-1 text-sm">
-                  Baccalaureat in Physiques (with honors)
+                  Baccalaureat in Physics (with honors)
                 </p>
                 <p className="mt-1 text-sm">2018-2019</p>
               </li>

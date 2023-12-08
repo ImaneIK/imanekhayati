@@ -14,9 +14,9 @@ export default function Home() {
   const lightThemeClass = " border border-blue-600  w-12 h-0  mx-auto";
   const darkThemeClass = " border border-gray-200 w-12 h-0  mx-auto";
   const lightThemehero =
-    "block backdrop-blur-md border border-blue-800 flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-4 md:p-12 lg:p-4 overflow-hidden";
+    "block backdrop-blur-md border border-blue-800 flex flex-col rounded-xl w-full h-full p-4 md:p-12 lg:p-4 overflow-hidden";
   const darkThemehero =
-    "block bg-indigo-500 border border-gray-500 bg-opacity-10 backdrop-blur-md flex flex-col md:gap-16 lg:gap-4 2xl:gap-16 rounded-xl w-full h-full p-4 md:p-12 lg:p-4 overflow-hidden";
+    "block bg-indigo-500 border border-gray-500 bg-opacity-10 backdrop-blur-md flex flex-col gap-4 rounded-xl w-full h-full p-4 md:p-12 lg:p-4 overflow-hidden";
 
   return (
     <div className="h-max lg:h-screen" style={{ position: "relative", padding: "2vw" }}>
@@ -28,7 +28,7 @@ export default function Home() {
           
           <div className="flex flex-col justify-start w-full lg:w-1/4 ">
             <div className=" p-6 lg:px-2 border border-gray-500 flex flex-col h-min">
-              <p className="block text-8xl font-extrabold">0.2</p>
+              <p className="block text-8xl 2xl:text-[8.7rem] font-extrabold">0.2</p>
               <p className="px-2 ">VERSION</p>
             </div>
 
@@ -99,7 +99,7 @@ export default function Home() {
 
             <div className=" p-4 border border-gray-500 flex flex-col h-full justify-center lg:justify-start xl:justify-center">
               <div className="flex flex-col justify-center">
-                <p className="block text-5xl font-extrabold py-2">I'm Imane!</p>
+                <p className="block text-4xl xl:text-5xl 2xl:text-[4.7rem] font-extrabold py-2">I'm Imane!</p>
                 <p className=" block text-xs md:text-sm 2xl:text-xl  w-full ">
                   Based in Morocco, i am a passionate web developer and computer
                   science student on a mission to create captivating online

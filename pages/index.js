@@ -51,7 +51,7 @@ import { useTheme } from "@/pages/_app";
 export default function Root({ projects }) {
 
   const { theme } = useTheme();
-  const lightThemeClass = " border border-green-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
+  const lightThemeClass = " border border-blue-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
   const darkThemeClass = " border border-gray-200 inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition";
  
   
@@ -70,7 +70,7 @@ export default function Root({ projects }) {
       <Home/>
       {/* <Projects/> */}
       <section class="">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-4 lg:px-12">
+      <div className="mx-auto max-w-screen-4xl px-4 py-8 sm:py-12 sm:px-6 lg:py-4 lg:px-12">
         <div className="mx-auto py-4 text-center">
           
           <h2 className="text-3xl font-extrabold  sm:text-5xl">
@@ -81,9 +81,9 @@ export default function Root({ projects }) {
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>
-        <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5'>
+        <div className='flex flex-wrap gap-8 justify-center'>
         {projects.map((project) => (  
-        <Card title={project.title} description={project.description} link={project.slug}/>
+        <Card  title={project.title} description={project.description} link={project.slug}/>
         ))}
         </div>
         

@@ -5,13 +5,13 @@ const Bloc1 = () => {
   return (
     <div className="p-4 border border-gray-500 flex flex-col gap-4 w-full text-center md:text-left align-center mx-auto justify-center lg:justify-start h-full">
   <div>
-    <p className="text-5xl md:text-7xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-9xl font-extrabold lg:justify-center text-center lg:text-start">
+    <p className="text-5xl md:text-7xl lg:text-5xl xl:text-[3.7rem]  2xl:text-[4.7rem] 3xl:text-[6.7rem]  font-extrabold lg:justify-center text-center lg:text-start">
       Within the ode to webcraft
     </p>
-    <p className="pt-2 lg:justify-center text-center lg:text-start">Weaving lines of code</p>
+    <p className="pt-2 lg:justify-center text-center lg:text-start xl:text-[1rem] 2xl:text-[2rem]">Weaving together lines of code</p>
   </div>
 
-  <div className="h-60 lg:h-52 xl:h-64 2xl:h-72 3xl:h-96  w-full overflow-hidden rounded-md">
+  <div className="h-[20rem] lg:h-52 xl:h-64 2xl:h-[2/3rem] 3xl:h-[40rem]  w-full overflow-hidden rounded-md">
     <div className="relative w-full h-full">
       <video
         style={{ width: '100%' }}
