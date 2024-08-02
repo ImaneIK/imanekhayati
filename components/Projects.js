@@ -9,7 +9,7 @@ export default function Projects({projects}) {
   const lightThemeClass = " border border-blue-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
   const darkThemeClass = " border border-gray-200 inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition";
   return (
-    <section class="">
+    <section className="">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-4 lg:px-12">
         <div className="mx-auto py-4 text-center">
           
@@ -17,7 +17,7 @@ export default function Projects({projects}) {
           Explore our projects
           </h2>
 
-          <p class="mt-4 ">
+          <p className="mt-4 ">
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>

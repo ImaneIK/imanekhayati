@@ -7,6 +7,7 @@ import Form from '/components/form'
 import Circles from '@/components/Circles';
 import Card from '/components/Card'
 import { useTheme } from "@/pages/_app";
+import Carousel from '@/components/carousel';
 
 
   // let isConnected=false;
@@ -68,8 +69,11 @@ export default function Root({ projects }) {
         )} */}
 
       <Home/>
+
+      <Carousel/>
+
       {/* <Projects/> */}
-      <section class="">
+      <section className="">
       <div className="mx-auto max-w-screen-4xl px-4 py-8 sm:py-12 sm:px-6 lg:py-4 lg:px-12">
         <div className="mx-auto py-4 text-center">
           
@@ -77,13 +81,13 @@ export default function Root({ projects }) {
           Explore our projects
           </h2>
 
-          <p class="mt-4 ">
+          <p className="mt-4 ">
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>
         <div className='flex flex-wrap gap-8 justify-center'>
         {projects.map((project) => (  
-        <Card  title={project.title} description={project.description} link={project.slug}/>
+        <Card title={project.title} description={project.description} link={project.slug}/>
         ))}
         </div>
         
@@ -98,6 +102,9 @@ export default function Root({ projects }) {
         </div>
       </div>
     </section>
+
+      
+
       <Form/>
       <Footer/>
     </div>

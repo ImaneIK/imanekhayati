@@ -4,21 +4,58 @@ import { useTheme } from "@/pages/_app";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import cardsData from '../../components/data.json';  
+import clientPromise from "/lib/mongodb";
 import Image from "next/image";
 import logo from '/public/logo1.png'
 import Menu from '/components/menu'
 
-const ProjectPage = () => {
+// Fetch the project data from the remote database based on the slug
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
+
+  try {
+    const client = await clientPromise;
+    const db = client.db("portfolio");
+
+    const card = await db
+      .collection("projects")
+      .findOne({ slug: slug });
+
+    if (!card) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: { card: JSON.parse(JSON.stringify(card)) },
+    };
+  } catch (e) {
+    console.error(e);
+    return {
+      props: { project: null },
+    };
+  }
+}
+
+const ProjectPage = ({card}) => {
 
   const { theme } = useTheme();
   const darktimageSrc="https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
   const lightimageSrc="https://images.pexels.com/photos/9436715/pexels-photo-9436715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
+
   const router = useRouter();
-  const { slug } = router.query;
+  // const { slug } = router.query;
+
+
 
   // Find the card data based on the slug
-  const card = cardsData.find((card) => card.slug === slug);
+  // const card = projects.find((card) => card.slug === slug);
+
+    // Debugging
+    // console.log("cardsData:", projects);
+    // console.log("slug:", slug);
   if (!card) {
     // You can render an error message or redirect to a 404 page here
     return <div>Card not found</div>;
@@ -85,6 +122,7 @@ const ProjectPage = () => {
           <div className='relative h-full w-full'>
            
               <Image 
+              alt=''
               fill="true" 
               src= {theme == 'dark' ? darktimageSrc : lightimageSrc}
               // sizes='(max-width:768px) 100vw, 7OOpx'
@@ -94,14 +132,14 @@ const ProjectPage = () => {
               />
        
             
-              <div  class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+              <div  className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
                 {/* this is hidden */}
-                <div class="flex flex-col md:flex-row hidden items-center md:justify-between md:gap-4">
-                  <div class="relative hidden sm:block">
-                    <label class="sr-only" for="search"> Search </label>
+                <div className="flex flex-col md:flex-row hidden items-center md:justify-between md:gap-4">
+                  <div className="relative hidden sm:block">
+                    <label className="sr-only" htmlFor="search"> Search </label>
 
                     <input
-                      class="h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
+                      className="h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
                       id="search"
                       type="search"
                       placeholder="Search ..."
@@ -109,20 +147,20 @@ const ProjectPage = () => {
 
                     <button
                       type="button"
-                      class="absolute end-1 top-1/2 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700"
+                      className="absolute end-1 top-1/2 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700"
                     >
-                      <span class="sr-only">Search</span>
+                      <span className="sr-only">Search</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4"
+                        className="h-4 w-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                         />
                       </svg>
@@ -130,25 +168,25 @@ const ProjectPage = () => {
                   </div>
 
                   <div
-                    class=" flex flex-1 hidden  items-center justify-between gap-8 sm:justify-end"
+                    className=" flex flex-1 hidden  items-center justify-between gap-8 sm:justify-end"
                   >
-                    <div class="flex gap-4">
+                    <div className="flex gap-4">
                       <button
                         type="button"
-                        class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700 sm:hidden"
+                        className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700 sm:hidden"
                       >
-                        <span class="sr-only">Search</span>
+                        <span className="sr-only">Search</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5"
+                          className="h-5 w-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                           />
                         </svg>
@@ -156,24 +194,24 @@ const ProjectPage = () => {
 
                       <a
                         href="#"
-                        class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
+                        className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
                       >
-                        <span class="sr-only">Academy</span>
+                        <span className="sr-only">Academy</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5"
+                          className="h-5 w-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                         >
                           <path d="M12 14l9-5-9-5-9 5 9 5z" />
                           <path
                             d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
                           />
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                           />
                         </svg>
@@ -181,20 +219,20 @@ const ProjectPage = () => {
 
                       <a
                         href="#"
-                        class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
+                        className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
                       >
-                        <span class="sr-only">Notifications</span>
+                        <span className="sr-only">Notifications</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          class="h-5 w-5"
+                          className="h-5 w-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
-                          stroke-width="2"
+                          strokeWidth="2"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                           />
                         </svg>
@@ -203,24 +241,24 @@ const ProjectPage = () => {
 
                     <button
                       type="button"
-                      class="group flex shrink-0 items-center rounded-lg transition"
+                      className="group flex shrink-0 items-center rounded-lg transition"
                     >
-                      <span class="sr-only">Menu</span>
+                      <span className="sr-only">Menu</span>
                       <img
                         alt="Man"
                         src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                        class="h-10 w-10 rounded-full object-cover"
+                        className="h-10 w-10 rounded-full object-cover"
                       /> 
 
-                      <p class="ms-2 hidden text-left text-xs sm:block">
-                        <strong class="block font-medium">Imane Khayati</strong>
+                      <p className="ms-2 hidden text-left text-xs sm:block">
+                        <strong className="block font-medium">Imane Khayati</strong>
 
-                        <span class="text-gray-500"> imane.khayati@e-polytechnique.ma </span>
+                        <span className="text-gray-500"> imane.khayati@e-polytechnique.ma </span>
                       </p>
 
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="ms-4 hidden h-5 w-5 text-gray-500 transition group-hover:text-gray-700 sm:block"
+                        className="ms-4 hidden h-5 w-5 text-gray-500 transition group-hover:text-gray-700 sm:block"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -234,13 +272,13 @@ const ProjectPage = () => {
                   </div>
                 </div>
 
-                <div class="mt-8">
+                <div className="mt-8">
                
-                  <h1 class="text-2xl font-bold text-gray-100 sm:text-3xl">
+                  <h1 className="text-2xl font-bold text-gray-100 sm:text-3xl">
                   {card.title}
                   </h1>
 
-                  <p class="mt-1.5 text-sm text-gray-100">
+                  <p className="mt-1.5 text-sm text-gray-100">
                     {card.description}
                   </p>
                 </div>
@@ -264,9 +302,9 @@ const ProjectPage = () => {
                   <path d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                   />
                   </svg>
@@ -288,9 +326,9 @@ const ProjectPage = () => {
                         <path d="M12 14l9-5-9-5-9 5 9 5z" />
                         <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                         />
                     </svg>
@@ -310,9 +348,9 @@ const ProjectPage = () => {
                       <path d="M12 14l9-5-9-5-9 5 9 5z" />
                       <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                       />
                     </svg>
@@ -334,9 +372,9 @@ const ProjectPage = () => {
                       <path d="M12 14l9-5-9-5-9 5 9 5z" />
                       <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                       />
                     </svg>
@@ -359,9 +397,9 @@ const ProjectPage = () => {
                             <path d="M12 14l9-5-9-5-9 5 9 5z" />
                             <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
                               d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                             />
                         </svg>
@@ -383,9 +421,9 @@ const ProjectPage = () => {
                         <path d="M12 14l9-5-9-5-9 5 9 5z" />
                         <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                         />
                       </svg>
@@ -419,9 +457,9 @@ const ProjectPage = () => {
                       <path d="M12 14l9-5-9-5-9 5 9 5z" />
                       <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                       />
                     </svg>
@@ -446,16 +484,16 @@ const ProjectPage = () => {
                         <path d="M12 14l9-5-9-5-9 5 9 5z" />
                         <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                         />
                       </svg>
                     <h2 className="mt-4 text-md font-bold ">Links & ressources</h2>
                     
                     {card.resources.map((link, index) => (
-                        <Link href={link} className="mt-1 text-sm ">Github link</Link>
+                        <Link key={link || index} href={link} className="mt-1 text-sm ">Github link</Link>
                     ))}
                 </div>
             </div>

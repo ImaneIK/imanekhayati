@@ -101,25 +101,25 @@ const Portfolio = ({projects}) => {
            />
     
          
-           <div  class="  mx-auto px-4 py-8 sm:px-4 lg:px-8 ">
+           <div  className="  mx-auto px-4 py-8 sm:px-4 lg:px-8 ">
 
-             <div class="mt-4 text-center md:text-left my-4">
+             <div className="mt-4 text-center md:text-left my-4">
             
              <h2 className="text-3xl font-extrabold text-gray-100 sm:text-4xl">
           Explore our projects
           </h2>
 
-          <p class="mt-4 text-gray-100">
+          <p className="mt-4 text-gray-100">
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
              </div>
 
-             <div class="hidden flex flex-col md:flex-row items-center md:justify-between md:gap-4">
-               <div class="relative ">
-                 <label class="sr-only" for="search"> Search </label>
+             <div className="hidden flex flex-col md:flex-row items-center md:justify-between md:gap-4">
+               <div className="relative ">
+                 <label className="sr-only" for="search"> Search </label>
 
                  <input
-                   class="h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
+                   className="h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
                    id="search"
                    type="search"
                    placeholder="Search ..."
@@ -127,12 +127,12 @@ const Portfolio = ({projects}) => {
 
                  <button
                    type="button"
-                   class="absolute end-1 top-1/2 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700"
+                   className="absolute end-1 top-1/2 -translate-y-1/2 rounded-md bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700"
                  >
-                   <span class="sr-only">Search</span>
+                   <span className="sr-only">Search</span>
                    <svg
                      xmlns="http://www.w3.org/2000/svg"
-                     class="h-4 w-4"
+                     className="h-4 w-4"
                      fill="none"
                      viewBox="0 0 24 24"
                      stroke="currentColor"
@@ -148,17 +148,17 @@ const Portfolio = ({projects}) => {
                </div>
 
                <div
-                 class=" flex flex-1   items-center justify-between gap-8 sm:justify-end"
+                 className=" flex flex-1   items-center justify-between gap-8 sm:justify-end"
                >
-                 <div class="flex gap-4">
+                 <div className="flex gap-4">
                    <button
                      type="button"
-                     class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700 sm:hidden"
+                     className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700 sm:hidden"
                    >
-                     <span class="sr-only">Search</span>
+                     <span className="sr-only">Search</span>
                      <svg
                        xmlns="http://www.w3.org/2000/svg"
-                       class="h-5 w-5"
+                       className="h-5 w-5"
                        fill="none"
                        viewBox="0 0 24 24"
                        stroke="currentColor"
@@ -174,12 +174,12 @@ const Portfolio = ({projects}) => {
 
                    <a
                      href="#"
-                     class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
+                     className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
                    >
-                     <span class="sr-only">Academy</span>
+                     <span className="sr-only">Academy</span>
                      <svg
                        xmlns="http://www.w3.org/2000/svg"
-                       class="h-5 w-5"
+                       className="h-5 w-5"
                        fill="none"
                        viewBox="0 0 24 24"
                        stroke="currentColor"
@@ -199,12 +199,12 @@ const Portfolio = ({projects}) => {
 
                    <a
                      href="#"
-                     class="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
+                     className="block shrink-0 rounded-lg bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
                    >
-                     <span class="sr-only">Notifications</span>
+                     <span className="sr-only">Notifications</span>
                      <svg
                        xmlns="http://www.w3.org/2000/svg"
-                       class="h-5 w-5"
+                       className="h-5 w-5"
                        fill="none"
                        viewBox="0 0 24 24"
                        stroke="currentColor"
@@ -221,24 +221,24 @@ const Portfolio = ({projects}) => {
 
                  <button
                    type="button"
-                   class="group flex shrink-0 items-center rounded-lg transition"
+                   className="group flex shrink-0 items-center rounded-lg transition"
                  >
-                   <span class="sr-only">Menu</span>
+                   <span className="sr-only">Menu</span>
                    {/* <img
                      alt="Man"
                      src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                     class="h-10 w-10 rounded-full object-cover"
+                     clasName=="h-10 w-10 rounded-full object-cover"
                    /> */}
 
-                   <p class="ms-2  text-left text-xs sm:block">
-                     <strong class="block font-medium">Imane Khayati</strong>
+                   <p className="ms-2  text-left text-xs sm:block">
+                     <strong className="block font-medium">Imane Khayati</strong>
 
-                     <span class="text-gray-500"> imane.khayati@e-polytechnique.ma </span>
+                     <span className="text-gray-500"> imane.khayati@e-polytechnique.ma </span>
                    </p>
 
                    <svg
                      xmlns="http://www.w3.org/2000/svg"
-                     class="ms-4  h-5 w-5 text-gray-500 transition group-hover:text-gray-700 sm:block"
+                     className="ms-4  h-5 w-5 text-gray-500 transition group-hover:text-gray-700 sm:block"
                      viewBox="0 0 20 20"
                      fill="currentColor"
                    >
@@ -256,8 +256,8 @@ const Portfolio = ({projects}) => {
        </div>
 
        <div className='md:mx-8 p-4 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8'>
-                {projects.map((project) => (
-                     <Card title={project.title} description={project.description} link={project.slug}/>
+                {projects.map((project,index) => (
+                     <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug}/>
                 ))}
         </div>
 
