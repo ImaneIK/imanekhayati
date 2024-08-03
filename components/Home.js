@@ -4,7 +4,6 @@ import Menu from "/components/menu";
 import Navbar from "/components/navbar";
 import React, { useState } from "react";
 import Image from "next/image";
-import animatedPic from "/public/a.png";
 import Bloc1 from "@/components/bloc1";
 import footage from "../assets/footage.mp4";
 import bloc from "../assets/bloc.jpeg";

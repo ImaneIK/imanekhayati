@@ -2,17 +2,25 @@ import React from 'react';
 import Link from 'next/link';
 import { useTheme } from "@/pages/_app";
 import cardsData from './data.json';  
+// import {thumbnail_dark_mode} from "../public/thumbnail_dark_mode.jpg";
+// import {thumbnail_light_mode} from "../public/thumbnail_light_mode.jpg";
 
 const CardGrid = ({title,description,link}) => {
   const { theme } = useTheme();
-  const lightThemeClass = "block h-full w-[85vw] md:w-[40vw] xl:w-[25vw]  rounded-xl p-8 shadow-xl transition  border border-blue-700  hover:border-blue-300/10 hover:shadow-blue-800/10"; 
-  const darkThemeClass = "block h-full w-[85vw] md:w-[40vw] xl:w-[28vw] 2xl:w-[15vw] rounded-xl p-8 shadow-xl transition  border border-gray-200 hover:border-indigo-500/10 hover:shadow-indigo-500/10";
+  const lightThemeClass = "block bg-cover bg-center h-full w-[85vw] md:w-[40vw] xl:w-[25vw]  rounded-xl p-8 shadow-xl transition  border border-blue-700  hover:border-blue-300/10 hover:shadow-blue-800/10"; 
+  const darkThemeClass = "block bg-cover bg-center h-full w-[85vw] md:w-[40vw] xl:w-[28vw] 2xl:w-[15vw] rounded-xl p-8 shadow-xl transition  border border-gray-200 hover:border-indigo-500/10 hover:shadow-indigo-500/10";
+  
+
+  // Conditional classes for background image
+  const backgroundImage = theme === 'dark' ? '/images/thumbnail_dark_mode.jpg' : '/images/thumbnail_light_mode.jpg';
+
   return (
-    <div className="mt-4">
+    <div className="mt-4 " >
      
         <Link
           className={theme ===  'dark' ? darkThemeClass : lightThemeClass}
           href={`/project/${link}`}
+          style={{ backgroundImage: `url(${backgroundImage})` , minHeight: '200px'}}
         >
           {/* href={`/project/${card.slug}`} */}
           <svg
