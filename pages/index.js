@@ -49,6 +49,8 @@ import Carousel from '@/components/carousel';
   }
 }
 
+
+
 export default function Root({ projects }) {
 
   const { theme } = useTheme();
@@ -73,8 +75,9 @@ export default function Root({ projects }) {
       <Carousel/>
 
       {/* <Projects/> */}
-      <section className="">
-      <div className="mx-auto max-w-screen-4xl px-4 py-8 sm:py-12 sm:px-6 lg:py-4 lg:px-12">
+ 
+      <div className="mx-auto flex flex-col gap-6 items-center">
+
         <div className="mx-auto py-4 text-center">
           
           <h2 className="text-3xl font-extrabold  sm:text-5xl">
@@ -85,10 +88,11 @@ export default function Root({ projects }) {
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>
-        <div className='flex flex-wrap gap-8 justify-center'>
-        {projects.map((project) => (  
-        <Card title={project.title} description={project.description} link={project.slug}/>
-        ))}
+
+        <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8'>
+                {projects.map((project,index) => (
+                     <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug} thumbnail={project.thumbnail}/>
+                ))}
         </div>
         
         {/* CTA button */}
@@ -101,7 +105,7 @@ export default function Root({ projects }) {
           </a>
         </div>
       </div>
-    </section>
+   
 
       
 

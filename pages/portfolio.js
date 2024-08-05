@@ -87,7 +87,7 @@ const Portfolio = ({projects}) => {
       </div>
 
 
-      <div className='md:ml-16  w-full'>
+      <div className='flex flex-col gap-6 md:ml-16  w-full'>
         <div className='relative'>
            
            <Image 
@@ -255,9 +255,9 @@ const Portfolio = ({projects}) => {
            </div>
        </div>
 
-       <div className='md:mx-8 p-4 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8'>
+       <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8'>
                 {projects.map((project,index) => (
-                     <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug}/>
+                     <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug} thumbnail={project.thumbnail}/>
                 ))}
         </div>
 
