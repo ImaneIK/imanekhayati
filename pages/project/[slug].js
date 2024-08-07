@@ -493,7 +493,9 @@ const ProjectPage = ({card}) => {
                     <h2 className="mt-4 text-md font-bold ">Links & ressources</h2>
                     
                     {card.resources.map((link, index) => (
-                        <Link key={link || index} href={link} className="mt-1 text-sm ">Github link</Link>
+                      
+                        <Link key={link || index} href={link} className="mt-1 text-sm block">{link}</Link> 
+                       
                     ))}
                 </div>
             </div>
