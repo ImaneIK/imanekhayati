@@ -54,21 +54,13 @@ import Carousel from '@/components/carousel';
 export default function Root({ projects }) {
 
   const { theme } = useTheme();
-  const lightThemeClass = " border border-blue-700  inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition"; 
-  const darkThemeClass = " border border-gray-200 inline-block rounded bg-transparent border  px-12 py-3 text-sm font-medium transition";
+  const lightThemeClass = " border border-blue-700  inline-block rounded-md bg-transparent border  px-[5vh] py-[2vh] text-[2vh] font-medium transition"; 
+  const darkThemeClass = " border border-gray-200 inline-block rounded-md bg-transparent border  px-[5vh] py-[2vh] text-[2vh] font-medium transition";
  
   
   return (
     <div>
-      {/* <Circles/> */}
-      {/* {isConnected ? (
-          <h2 className="subtitle">You are connected to MongoDB</h2>
-        ) : (
-          <h2 className="subtitle">
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{' '}
-            for instructions.
-          </h2>
-        )} */}
+      
 
       <Home/>
 
@@ -76,27 +68,27 @@ export default function Root({ projects }) {
 
       {/* <Projects/> */}
  
-      <div className="mx-auto flex flex-col gap-6 items-center">
+      <div className="mx-auto flex flex-col gap-6 items-center px-2 md:px-[10vh]">
 
-        <div className="mx-auto py-4 text-center">
+        <div className="mx-auto py-[5vh] text-center">
           
-          <h2 className="text-3xl font-extrabold  sm:text-5xl">
+          <h2 className="text-3xl font-extrabold  sm:text-[6vh]">
           Explore our projects
           </h2>
 
-          <p className="mt-4 ">
+          <p className="mt-[3vh] text-[2vh]">
           Discover a curated selection of our projects, crafted with passion and dedication.
           </p>
         </div>
 
-        <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8'>
+        <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-[3vh]'>
                 {projects.map((project,index) => (
                      <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug} thumbnail={project.thumbnail}/>
                 ))}
         </div>
         
         {/* CTA button */}
-        <div className="mt-12 text-center">
+        <div className="mt-[5vh]  text-center">
           <a
             href="/portfolio"
             className={theme === "light" ? lightThemeClass : darkThemeClass}

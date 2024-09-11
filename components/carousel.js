@@ -17,62 +17,65 @@ return(
         ul.insertAdjacentHTML('afterend', ul.outerHTML);
         ul.nextSibling.setAttribute('aria-hidden', 'true');
     })"
-    class="my-6 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+    class="my-[6vh] w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
 >
     
-    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-[5vh] [&_img]:max-w-none animate-infinite-scroll">
         <li>
-            <Image src={next_logo} width={90} height={90} alt="Next.js"></Image>
+            <Image src={next_logo}className="h-[12vh] w-[12vh]" alt="Next.js"></Image>
         </li>
         <li>
-            <Image src={tailwind_logo} width={80} height={80} alt="Tailwind CSS.js"></Image>
+            <Image src={tailwind_logo} className="h-[12vh] w-[12vh]" alt="Tailwind CSS.js"></Image>
         </li>
         <li>
-            <Image src={react_logo} width={70} height={70} alt="react.js"></Image>
+            <Image src={react_logo} className="h-[12vh] w-[12vh]"  alt="react.js"></Image>
         </li>
         <li>
-            <Image src={vue_logo} width={70} height={70} alt="vue.js"></Image>
+            <Image src={vue_logo} className="h-[12vh] w-[12vh]" alt="vue.js"></Image>
         </li>
         <li>
-            <Image src={mongodb_logo} width={100} height={100} alt="mongoDB.js"></Image>
+            <Image src={mongodb_logo} className="h-[12vh] w-[12vh]" alt="mongoDB.js"></Image>
         </li>
         <li>
-            <Image src={angular_logo} width={60} height={60} alt="angular.js"></Image>
+            <Image src={angular_logo} className="h-[12vh] w-[12vh]" alt="angular.js"></Image>
         </li>
         <li>
-            <Image src={python_logo} width={60} height={60} alt="python.js"></Image>
+            <Image src={python_logo} className="h-[12vh] w-[12vh]" alt="python.js"></Image>
         </li>
         <li>
-            <Image src={mysql_logo} width={80} height={80} alt="mysql"></Image>
+            <Image src={mysql_logo} className="h-[12vh] w-[12vh]" alt="mysql"></Image>
         </li>
     </ul> 
 
-    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-        <li>
-            <Image src={next_logo} width={90} height={90} alt="next.js"></Image>
+    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-[5vh] [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+    <li>
+            <Image src={next_logo}className="h-[12vh] w-[12vh]" alt="Next.js"></Image>
         </li>
         <li>
-            <Image src={tailwind_logo} width={80} height={80} alt="Tailwind CSS"></Image>
+            <Image src={tailwind_logo} className="h-[12vh] w-[12vh]" alt="Tailwind CSS.js"></Image>
         </li>
         <li>
-            <Image src={react_logo} width={70} height={70} alt="react.js"></Image>
+            <Image src={react_logo} className="h-[12vh] w-[12vh]"  alt="react.js"></Image>
         </li>
         <li>
-            <Image src={vue_logo} width={70} height={70} alt="vue.js"></Image>
+            <Image src={vue_logo} className="h-[12vh] w-[12vh]" alt="vue.js"></Image>
         </li>
         <li>
-            <Image src={mongodb_logo} width={100} height={100} alt="mongoDB"></Image>
+            <Image src={mongodb_logo} className="h-[12vh] w-[12vh]" alt="mongoDB.js"></Image>
         </li>
         <li>
-            <Image src={angular_logo} width={60} height={60} alt="angular.js"></Image>
+            <Image src={angular_logo} className="h-[12vh] w-[12vh]" alt="angular.js"></Image>
         </li>
         <li>
-            <Image src={python_logo} width={60} height={60} alt="python"></Image>
+            <Image src={python_logo} className="h-[12vh] w-[12vh]" alt="python.js"></Image>
         </li>
         <li>
-            <Image src={mysql_logo} width={80} height={80} alt="mysql"></Image>
+            <Image src={mysql_logo} className="h-[12vh] w-[12vh]" alt="mysql"></Image>
         </li>
-    </ul>                
+    </ul>   
+
+   
+                 
 </div>
 )
 }

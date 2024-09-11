@@ -14,13 +14,30 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        float: 'float 4s ease-in-out infinite',
+        glow: 'glow 4s ease-in-out infinite',
+        'spin-slow': 'spin 30s linear infinite',
+
       },
+      
 
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
-        }
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%, 100%': { opacity: '0.4' }, // Stronger glow when ball is near the ground
+          '50%': { opacity: '0.1' }, // Weaker glow when ball is higher
+        },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },   
       
       circle1: {

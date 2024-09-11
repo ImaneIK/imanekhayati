@@ -27,7 +27,7 @@ export default function Toggle() {
       { theme === 'dark' ? (
         <span className="">
           <svg
-            className="h-6 w-6"
+            className="h-6 w-6 xl:h-[3.5vh] md:w-[3.5vh]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -43,7 +43,7 @@ export default function Toggle() {
       ) : (
         <span className="">
           <svg
-            className="h-6 w-6"
+            className="h-6 w-6 xl:h-[3.5vh] md:w-[3.5vh]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
