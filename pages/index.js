@@ -68,7 +68,7 @@ export default function Root({ projects }) {
 
       {/* <Projects/> */}
  
-      <div className="mx-auto flex flex-col gap-6 items-center px-2 md:px-[10vh]">
+      <div className="mx-auto flex flex-col gap-[4vh] items-center px-2 md:px-[10vh]">
 
         <div className="mx-auto py-[5vh] text-center">
           
@@ -81,7 +81,7 @@ export default function Root({ projects }) {
           </p>
         </div>
 
-        <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-[3vh]'>
+        <div className=' py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-[5vh]'>
                 {projects.map((project,index) => (
                      <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug} thumbnail={project.thumbnail}/>
                 ))}

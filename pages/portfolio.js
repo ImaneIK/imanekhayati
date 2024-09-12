@@ -254,7 +254,7 @@ const Portfolio = ({projects}) => {
            </div>
        </div>
 
-       <div className='mx-auto px-4 py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-[3vh]'>
+       <div className='mx-auto px-4 py-6 md:mx-8 md:p-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-[4vh]'>
                 {projects.map((project,index) => (
                      <Card key={project.slug || index}  title={project.title} description={project.description} link={project.slug} thumbnail={project.thumbnail}/>
                 ))}
