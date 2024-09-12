@@ -27,10 +27,10 @@ export default function Home() {
 
         <div  className="flex flex-col-reverse lg:h-screen justify-start lg:flex-row-reverse w-full 2xl:hidden">
           
-          <div className="flex flex-col justify-start w-full lg:w-1/4 ">
+          <div className="hidden md:flex flex-col justify-start w-full lg:w-1/4 ">
             <div className=" p-6 lg:px-2 border border-gray-500 flex flex-col h-min">
               <p className="block text-8xl 2xl:text-[8.7rem] font-extrabold">0.2</p>
-              <p className="px-2 ">VERSION</p>
+              <p className="px-2 ">version</p>
             </div>
 
             <div className=" border border-gray-500 h-full">
@@ -45,10 +45,9 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col-reverse lg:flex-col justify-start w-full lg:w-1/4 align-center h-full text-center lg:text-start">
-            <div className=" p-4 border border-gray-500 flex flex-col lg:flex-row-reverse items-center  gap-4 h-max">
-              <p className=" block text-xs md:text-sm 2xl:text-xl  w-full ">
-                Stay as close as your favorite emoji and hit me up whenever you
-                feel like dropping a virtual high-five! 🌟👋
+            <div className=" p-4 border border-gray-500 flex flex-col lg:flex-row items-center  gap-4 h-max">
+              <p className=" block text-[6vh] font-extrabold  w-full ">
+                Let's connect !
               </p>
               <div className="w-fit flex flex-row lg:flex-col  gap-2 items-center justify-center px-2 mx-auto">
                 <a href="https://github.com/ImaneIK">
@@ -112,12 +111,14 @@ export default function Home() {
 
           </div>
 
-          <div  className="w-full lg:w-2/4 justify-start h-full">
+          <div  className=" w-full lg:w-2/4 justify-start h-full">
             <Bloc1></Bloc1>
           </div>
 
         </div>
 
+
+        {/* on screen>2xl display */}
         <div className="hidden 2xl:flex flex-row  items-center justify-center mx-auto px-[10vw]">
             <div className="w-1/2 flex flex-col ">
             <div className=" flex flex-col items-start justify-left">

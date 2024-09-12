@@ -35,7 +35,7 @@ export default function About() {
             <h1 className="mt-4 text-[4vh] font-bold ">
               Imane Khayati
             </h1>
-            <p className="mt-1 text-[2vh] ">Web Developper</p>
+            <p className="mt-1 text-[2vh] ">Web Developer</p>
              {/* Fr link */}
           <a className='block'
               href={fr_cv_link}
