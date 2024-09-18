@@ -5,7 +5,7 @@ import Menu from '/components/menu'
 export default function About() {
   const googleDriveLink =
     "https://drive.google.com/file/d/15ajVIrGgfJNLY7382Ud-QwZtz-8Tgp9w/view?usp=sharing ";
-  const fr_cv_link = "https://drive.google.com/file/d/1BDdqxFShpE4v0RMkVsOruathtY5vH9lz/view?usp=sharing";
+  const fr_cv_link = "https://drive.google.com/file/d/1rR_MNM5-3trBBE-pPl-ZUId00WheBhb7/view?usp=sharing";
   return (
     <div className="p-6">
       <Menu />

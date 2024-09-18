@@ -47,7 +47,7 @@ export default function Home() {
           <div className="flex flex-col-reverse lg:flex-col justify-start w-full lg:w-1/4 align-center h-full text-center lg:text-start">
             <div className=" p-4 border border-gray-500 flex flex-col lg:flex-row items-center  gap-4 h-max">
               <p className=" block text-[6vh] font-extrabold  w-full ">
-                Let's connect !
+                Let's connect!
               </p>
               <div className="w-fit flex flex-row lg:flex-col  gap-2 items-center justify-center px-2 mx-auto">
                 <a href="https://github.com/ImaneIK">
