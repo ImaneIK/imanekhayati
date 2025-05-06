@@ -21,6 +21,7 @@ display: block;
 
 
 
+
 .loader {
   width: 60px;
   aspect-ratio: 2;
