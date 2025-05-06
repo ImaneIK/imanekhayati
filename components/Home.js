@@ -101,10 +101,7 @@ export default function Home() {
               <div className="flex flex-col justify-center">
                 <p className="block text-4xl xl:text-5xl 2xl:text-[4.7rem] font-extrabold py-2">I'm Imane!</p>
                 <p className=" block text-xs md:text-sm 2xl:text-xl  w-full ">
-                  Based in Morocco, i am a passionate web developer and computer
-                  science student on a mission to create captivating online
-                  experiences. Turning ideas into pixel-perfect reality, one
-                  line of code at a time.
+                I’m a Full-Stack Web Developer offering a range of services including the development of landing pages, niche business websites, and e-commerce platforms. I also provide UI/UX consultation to help enhance user experience and interface design. For inquiries or service requests, feel free to contact me via email.
                 </p>
               </div>
             </div>

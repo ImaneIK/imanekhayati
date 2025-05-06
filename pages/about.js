@@ -5,7 +5,7 @@ import Menu from '/components/menu'
 export default function About() {
   const googleDriveLink =
     "https://drive.google.com/file/d/15ajVIrGgfJNLY7382Ud-QwZtz-8Tgp9w/view?usp=sharing ";
-  const fr_cv_link = "https://drive.google.com/file/d/1rR_MNM5-3trBBE-pPl-ZUId00WheBhb7/view?usp=sharing";
+  const fr_cv_link = "https://drive.google.com/file/d/19YD9l8JZleg21JSPv91Io6_-Ih9YD_nS/view?usp=sharing";
   return (
     <div className="p-6">
       <Menu />
@@ -136,8 +136,10 @@ export default function About() {
               <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Nuxt.js</p>
               <p className="mt-1 text-center border rounded-md p-2 border-gray-500">MongoDB</p>
               <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Tailwind</p>
+              <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Express.js</p>
               <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Node.js</p>
               <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Flutter</p>
+              <p className="mt-1 text-center border rounded-md p-2 border-gray-500">Data Science</p>
             </div>
           </div>
 
@@ -199,6 +201,18 @@ export default function About() {
             </svg>
             <h2 className="mt-4 text-[4vh] font-bold ">Experiences</h2>
             <ul>
+
+            <li className="py-4">
+                <div className="flex justify-between">
+                    <p className="mt-1 text-[2.5vh] font-semibold ">
+                    Full-Stack Developper | DigitalClick
+                    </p>
+                    <p className="mt-1 text-[2.5vh] ">November 2024 to April 2025</p>
+                </div>
+                <p className="mt-1 text-[2.5vh]"> Host organization: DigitalClick</p>
+                <p className="mt-1 text-[2.5vh]"> Développement de 10+ fonctionnalités front-end et back-end, améliorant l’expérience utilisateur et les performances. Optimisation du code réduisant les temps de chargement de 37 %. Conception de solutions sur mesure livrées dans les délais. Support technique pour 50+ utilisateurs avec 90 % de satisfaction. Automatisation de 5+ processus via LLMs, économisant 30+ h/semaine. Encadrement de 3 stagiaires en développement web. </p>
+                
+              </li>
 
             <li className="py-4">
                 <div className="flex justify-between">
